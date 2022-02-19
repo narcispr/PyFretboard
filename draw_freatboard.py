@@ -2,9 +2,12 @@ from matplotlib import pyplot as plt
 
 class DrawFreatboard:
     STRINGS = ['e', 'B', 'G', 'D', 'A', 'E']
+    NOTE_NAME = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'G#', 'A', 'Bb', 'B']
+    
     TEXT_NONE = 0
     TEXT_FUNCTION = 1
     TEXT_FINGER = 2
+    TEXT_NOTE = 3
     
     def __init__(self, shape, init_freat=None, min_freats=4, text=1):
         self.min_freats = min_freats
@@ -76,4 +79,11 @@ class DrawFreatboard:
                 self.axes.text(x-2.75, y-1.5, f.finger, fontsize=11, color='white')
             else:
                 self.axes.text(x-1.75, y-1.5, f.finger, fontsize=11, color='white')
+        elif self.text == DrawFreatboard.TEXT_NOTE:
+            note = DrawFreatboard.NOTE_NAME[f.semitone]
+            if len(note) == 2:
+                self.axes.text(x-2.75, y-1.5, note, fontsize=11, color='white')
+            else:
+                self.axes.text(x-1.75, y-1.5, note, fontsize=11, color='white')
+            
                 

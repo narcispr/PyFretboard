@@ -1,7 +1,10 @@
 import csv
 import copy
+import sys
+
 from shape import Shape
 from finger import Finger
+from draw_freatboard import DrawFreatboard
 
 
 class BuildShape:
@@ -9,9 +12,10 @@ class BuildShape:
     NOTES = {'C': 0, 'C#': 1, 'D': 2, 'Eb': 3, 'E': 4, 'F': 5, 'F#': 6, 'G': 7, 'G#': 8, 'A':9, 'Bb': 10, 'B': 11}
     INTERVALS = {'1': 0, 'b2': 1, '2': 2, '#2': 3, 'b3': 3, '3': 4, '#3': 5, 'b4': 4, '4': 5, '#4': 6, 'b5': 6, '5': 7, '#5': 8, 'b6': 8, '6': 9, '#6': 10, 'b7': 10, '7': 11, 'b9': 12, '9': 13, '#9': 14, 'b11': 14, '11': 15, '#11': 16, 'b13': 16, '13': 17, '#13': 18}
 
-    def __init__(self, root, shape_type):
+    def __init__(self, root, shape_type, plot_type=1):
         self.root = root
         self.shape_type = shape_type
+        self.plot_type = plot_type
         self.all_shapes = self.scale_to_freatboard()
 
         # Set fingering for each shape
@@ -26,7 +30,7 @@ class BuildShape:
     def plot(self):
         for s in self.all_shapes:
             if not s.not_valid:
-                s.plot()
+                s.plot(self.plot_type)
 
     def scale_to_freatboard(self):
         all_shapes = []
@@ -130,3 +134,15 @@ class BuildShape:
                         else:
                             s.not_valid = True
         
+if __name__ == "__main__":
+    plot_type = DrawFreatboard.TEXT_FINGER
+    if len(sys.argv) == 3:
+        BuildShape(sys.argv[1], sys.argv[2], plot_type=plot_type).plot()
+    elif len(sys.argv) == 4:
+        shapes = BuildShape(sys.argv[1], sys.argv[2])
+        for s in shapes.all_shapes:
+            f_max, f_min = s.get_max_min_freat()
+            if not s.not_valid and int(sys.argv[3]) >= f_min and int(sys.argv[3]) <= f_max:
+                s.plot(plot_type)
+    else:
+        print("Usage: python3 {} <root> <shape_type> [<freat_value>]".format(sys.argv[0]))

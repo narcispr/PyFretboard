@@ -1,5 +1,5 @@
 import copy
-from draw_freatboard import DrawFreatboard
+from PyFreatboard.draw_freatboard import DrawFreatboard
 
 class Shape:
     def __init__(self, fingers):

@@ -1,15 +1,33 @@
-import csv
-import copy
-import sys
-
-from shape import Shape
-from finger import Finger
-from draw_freatboard import DrawFreatboard
-
+from PyFreatboard.shape import Shape
+from PyFreatboard.finger import Finger
+from PyFreatboard.draw_freatboard import DrawFreatboard
 
 class BuildShape:
-    SHAPES_FILE = 'shapes.csv'
-  
+    SHAPES = {
+        'TriadMaj' : ['1', '3', '5'],
+        'TriadMin' : ['1', 'b3', '5'],
+        'TriadAug' : ['1', '3', '#5'],
+        'TriadDism' : ['1', 'b3', 'b5'],
+        '7' : ['1', '3', '5', 'b7'],
+        '-7' : ['1', 'b3', '5', 'b7'],
+        'Maj7' : ['1', '3', '5', '7'],
+        '-7b5' : ['1', 'b3', 'b5', 'b7'],
+        'º7' : ['1', 'b3', 'b5', '7'],
+        'Major' : ['1', '2', '3', '4', '5', '6', '7'],
+        'Minor' : ['1', '2', 'b3', '4', '5', 'b6', 'b7'],
+        'Pentatonic' : ['1', 'b3', '4', '5', 'b7'],
+        'PentatonicMaj' : ['1', '2', '3', '5', '6'],
+        'Diminished' : ['1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7'],
+        'Whole-half' : ['1', '2', 'b3', 'b4', 'b5', 'b6', 'b7'],
+        'Ionian' : ['1', '2', '3', '4', '5', '6', '7'],
+        'Dorian' : ['1', '2', 'b3', '4', '5', '6', 'b7'],
+        'Phrygian' : ['1', 'b2', 'b3', '4', '5', 'b6', 'b7'],
+        'Lydian' : ['1', '2', '3', '#4', '5', '6', '7'],
+        'Mixolydian' : ['1', '2', '3', '4', '5', '6', 'b7'],
+        'Aeolian' : ['1', '2', 'b3', '4', '5', 'b6', 'b7'],
+        'Locrian' : ['1', 'b2', 'b3', '4', 'b5', 'b6', 'b7']
+    }
+
     def __init__(self, root, shape_type, plot_type=1):
         self.root = root
         self.shape_type = shape_type
@@ -43,7 +61,7 @@ class BuildShape:
         return all_shapes
 
     def create_shape(self):
-        shapes_file = self.__load_shape_file__(BuildShape.SHAPES_FILE)
+        shapes_file = BuildShape.SHAPES
         harmony = shapes_file[self.shape_type]
         shape_notes = []
         for note in harmony:
@@ -81,23 +99,6 @@ class BuildShape:
                     fingers.append(Finger(n, h, string, freat + 12, None))    
         return fingers
 
-    def __load_shape_file__(self, filename):
-        shapes_file = {}
-        with open(filename, newline='') as csv_file:
-            shapes_reader = csv.reader(csv_file, delimiter=',', quotechar='#')
-            for row in shapes_reader:
-                harmony = []
-                name = ""
-                first = True
-                for item in row:
-                    if first:  
-                        name = item.strip()
-                        first = False
-                    else:
-                        harmony.append(item.strip())
-                shapes_file[name] = harmony
-        return shapes_file
-
     def filter_shapes(self):
         self.all_shapes.sort()
         for i, s in enumerate(self.all_shapes):
@@ -131,16 +132,3 @@ class BuildShape:
                             s2.not_valid = True
                         else:
                             s.not_valid = True
-        
-if __name__ == "__main__":
-    plot_type = DrawFreatboard.TEXT_FINGER
-    if len(sys.argv) == 3:
-        BuildShape(sys.argv[1], sys.argv[2], plot_type=plot_type).plot()
-    elif len(sys.argv) == 4:
-        shapes = BuildShape(sys.argv[1], sys.argv[2])
-        for s in shapes.all_shapes:
-            f_max, f_min = s.get_max_min_freat()
-            if not s.not_valid and int(sys.argv[3]) >= f_min and int(sys.argv[3]) <= f_max:
-                s.plot(plot_type)
-    else:
-        print("Usage: python3 {} <root> <shape_type> [<freat_value>]".format(sys.argv[0]))

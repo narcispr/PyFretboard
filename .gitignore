@@ -2,3 +2,4 @@ __pycache__/*
 *.png
 PyFreatboard.egg-info/*
 build/*
+dist/*

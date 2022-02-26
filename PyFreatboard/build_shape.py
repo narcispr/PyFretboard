@@ -2,6 +2,7 @@ from PyFreatboard.shape import Shape
 from PyFreatboard.finger import Finger
 from PyFreatboard.draw_freatboard import DrawFreatboard
 
+
 class BuildShape:
     SHAPES = {
         'TriadMaj' : ['1', '3', '5'],
@@ -41,7 +42,7 @@ class BuildShape:
         self.all_shapes = shapes_with_fingers
 
         # Filter not_valid or redundant shapes
-        self.filter_shapes()
+        self.all_shapes = self.filter_shapes(self.all_shapes)
 
     def plot(self):
         for s in self.all_shapes:
@@ -50,8 +51,8 @@ class BuildShape:
 
     def scale_to_freatboard(self):
         all_shapes = []
-        scale, harmony = self.create_shape()
-        fingers = self.__semitone_to_freat__(scale, harmony, Finger.guitar_strings)
+        scale, harmony = self.get_shape_notes_and_harmony()
+        fingers = self.__semitone_to_finger__(scale, harmony, Finger.guitar_strings)
             
         for r in fingers:
             if r.string == 'E':
@@ -60,7 +61,7 @@ class BuildShape:
             
         return all_shapes
 
-    def create_shape(self):
+    def get_shape_notes_and_harmony(self):
         shapes_file = BuildShape.SHAPES
         harmony = shapes_file[self.shape_type]
         shape_notes = []
@@ -85,7 +86,7 @@ class BuildShape:
         else:
             all_shapes.append(shape)
             
-    def __semitone_to_freat__(self, semitone, function, guitar_strings):
+    def __semitone_to_finger__(self, semitone, function, guitar_strings):
         fingers = []
         if not isinstance(semitone, list):
             semitone = [semitone]
@@ -99,16 +100,16 @@ class BuildShape:
                     fingers.append(Finger(n, h, string, freat + 12, None))    
         return fingers
 
-    def filter_shapes(self):
-        self.all_shapes.sort()
-        for i, s in enumerate(self.all_shapes):
+    def filter_shapes(self, shapes):
+        shapes.sort()
+        for i, s in enumerate(shapes):
             extensions = s.get_extensions()
             if extensions >= 4:
                 s.not_valid = True
             if not s.not_valid:
                 # Remove same position with less notes in 6th string
                 last_finger = s.fingers[-1]
-                for j, s2 in enumerate(self.all_shapes[i+1:]):
+                for j, s2 in enumerate(shapes[i+1:]):
                     if not s2.not_valid and s2.fingers[-1] == last_finger and len(s2.fingers) != len(s.fingers):
                         same_shape = True
                         k = 1
@@ -126,9 +127,87 @@ class BuildShape:
 
                 # Remove same position with more extensions
                 first_finger = s.fingers[0]
-                for j, s2 in enumerate(self.all_shapes[i+1:]):
+                for j, s2 in enumerate(shapes[i+1:]):
                     if not s2.not_valid and s2.fingers[0] == first_finger:
                         if s2.get_extensions() >= extensions:
                             s2.not_valid = True
                         else:
                             s.not_valid = True
+        return shapes
+
+    def build_drop(self, drop=2, bass_string='D'):
+        notes, harmony = self.get_shape_notes_and_harmony()
+        assert drop > 1 and drop < len(notes)
+        all_drops = []
+        
+        for i in range(len(notes)):
+            # get inversion
+            inv_notes = notes[i:] + notes[:i]
+            inv_h = harmony[i:] + harmony[:i]
+            # apply drop
+            bass = [inv_notes[-drop]]
+            bass_h = [inv_h[-drop]]
+            pre_drop = inv_notes[:-drop]
+            pre_drop_h = inv_h[:-drop]
+            post_drop = inv_notes[-(drop-1):]
+            post_drop_h = inv_h[-(drop-1):]
+            if isinstance(pre_drop, int):
+                pre_drop = [pre_drop]
+                pre_drop_h = [pre_drop_h]
+            if isinstance(post_drop, int):
+                post_drop = [post_drop]
+                post_drop_h = [post_drop_h]
+            
+            drop_notes = bass + pre_drop + post_drop
+            drop_h = bass_h + pre_drop_h + post_drop_h
+            fingers = self.__semitone_to_finger__(drop_notes, drop_h, Finger.guitar_strings)
+            all_drops_tmp = []    
+            for r in fingers:
+                if r.string == bass_string:
+                    shape = Shape([r])
+                    self.fill_shape(shape, drop_h, (drop_h.index(r.function) + 1) % len(drop_h), fingers, all_drops_tmp, r.freat, r.freat)
+                
+            all_drops += all_drops_tmp
+
+        # Set fingering for each shape
+        shapes_with_fingers = []
+        for i in range(len(all_drops)):
+            shapes_with_fingers.append(all_drops[i].set_fingering())
+        all_drops = shapes_with_fingers
+
+        # Filter not_valid or redundant shapes
+        # all_drops = self.filter_shapes(all_drops)
+        all_drops = self.filter_drops(all_drops, len(notes))
+        all_drops.sort()
+        return all_drops
+        
+    def filter_drops(self, drops, length):
+        for d in drops:
+            if not d.not_valid:
+                max, min = d.get_max_min_freat()
+                if max - min > 3:
+                    d.not_valid = True
+                if min == 0:
+                    d.not_valid = True
+                if len(d.fingers) < length:
+                    d.not_valid = True
+                elif len(d.fingers) > length:
+                    d.fingers = d.fingers[:length]
+                
+                for f1 in range(len(d.fingers)):
+                    for f2 in range(f1+1, len(d.fingers)):
+                        if d.fingers[f1].string == d.fingers[f2].string:
+                            d.not_valid = True
+                
+                for f in range(len(d.fingers) - 1):
+                    if Finger.guitar_strings.index(d.fingers[f].string) != (Finger.guitar_strings.index(d.fingers[f+1].string) + 1):
+                        d.not_valid = True
+        return drops
+
+if __name__ == "__main__":
+    drop = BuildShape('D', '-7', 1)
+    drops = drop.build_drop(drop=2, bass_string="A")
+    for d in drops:
+        if not d.not_valid:
+           d.plot(plot_type=DrawFreatboard.TEXT_NOTE)
+

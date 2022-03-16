@@ -47,15 +47,9 @@ class BuildShape:
             shapes_with_fingers.append(self.all_shapes[i].set_fingering())
         self.all_shapes = shapes_with_fingers
 
-        # Filter not_valid or redundant shapes
+        # Filter invalid or redundant shapes
         self.all_shapes = self.filter_shapes(self.all_shapes)
-
-    def plot(self):
-        for s in self.all_shapes:
-            if not s.not_valid:
-                s.plot(self.plot_type)
                 
-
     def scale_to_freatboard(self):
         all_shapes = []
         scale, harmony = self.get_shape_notes_and_harmony()
@@ -112,12 +106,12 @@ class BuildShape:
         for i, s in enumerate(shapes):
             extensions = s.get_extensions()
             if extensions >= 4:
-                s.not_valid = True
-            if not s.not_valid:
+                s.valid = False
+            if s.valid:
                 # Remove same position with less notes in 6th string
                 last_finger = s.fingers[-1]
                 for j, s2 in enumerate(shapes[i+1:]):
-                    if not s2.not_valid and s2.fingers[-1] == last_finger and len(s2.fingers) != len(s.fingers):
+                    if s2.valid and s2.fingers[-1] == last_finger and len(s2.fingers) != len(s.fingers):
                         same_shape = True
                         k = 1
                         while same_shape and k < min(len(s.fingers), len(s2.fingers)):
@@ -128,18 +122,18 @@ class BuildShape:
                                 same_shape = False
                         if same_shape:
                             if len(s2.fingers) < len(s.fingers):
-                                s2.not_valid = True
+                                s2.valid = False
                             else:
-                                s.not_valid = True
+                                s.valid = False
 
                 # Remove same position with more extensions
                 first_finger = s.fingers[0]
                 for j, s2 in enumerate(shapes[i+1:]):
-                    if not s2.not_valid and s2.fingers[0] == first_finger:
+                    if s2.valid and s2.fingers[0] == first_finger:
                         if s2.get_extensions() >= extensions:
-                            s2.not_valid = True
+                            s2.valid = False
                         else:
-                            s.not_valid = True
+                            s.valid = False
         return shapes
 
     def build_drop(self, drop=2, bass_string='D'):
@@ -182,7 +176,7 @@ class BuildShape:
             shapes_with_fingers.append(all_drops[i].set_fingering())
         all_drops = shapes_with_fingers
 
-        # Filter not_valid or redundant shapes
+        # Filter invalid or redundant shapes
         # all_drops = self.filter_shapes(all_drops)
         all_drops = self.filter_drops(all_drops, len(notes))
         all_drops.sort()
@@ -190,31 +184,30 @@ class BuildShape:
         
     def filter_drops(self, drops, length):
         for d in drops:
-            if not d.not_valid:
+            if d.valid:
                 max, min = d.get_max_min_freat()
                 if max - min > 3:
-                    d.not_valid = True
+                    d.valid = False
                 if min == 0:
-                    d.not_valid = True
+                    d.valid = False
                 if len(d.fingers) < length:
-                    d.not_valid = True
+                    d.valid = False
                 elif len(d.fingers) > length:
                     d.fingers = d.fingers[:length]
                 
                 for f1 in range(len(d.fingers)):
                     for f2 in range(f1+1, len(d.fingers)):
                         if d.fingers[f1].string == d.fingers[f2].string:
-                            d.not_valid = True
+                            d.valid = False
                 
                 for f in range(len(d.fingers) - 1):
                     if Finger.guitar_strings.index(d.fingers[f].string) != (Finger.guitar_strings.index(d.fingers[f+1].string) + 1):
-                        d.not_valid = True
+                        d.valid = False
         return drops
 
 if __name__ == "__main__":
     drop = BuildShape('D', '-7', 1)
     drops = drop.build_drop(drop=2, bass_string="A")
     for d in drops:
-        if not d.not_valid:
+        if d.valid:
            d.plot(plot_type=DrawFreatboard.TEXT_NOTE)
-

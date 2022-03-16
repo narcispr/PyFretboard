@@ -4,14 +4,10 @@ from PyFreatboard.draw_freatboard import DrawFreatboard
 class Shape:
     def __init__(self, fingers):
         self.fingers = fingers
-        self.not_valid = False
+        self.valid = True
 
     def __add__(self, a):
         return Shape(self.fingers + a)
-    
-    def plot(self, plot_type=DrawFreatboard.TEXT_FUNCTION):
-        d = DrawFreatboard(text=plot_type)
-        return d.draw_shape(self)
 
     def get_max_min_freat(self):
         min_f = 100
@@ -23,13 +19,13 @@ class Shape:
 
     def set_fingering(self):
         self.__set_fingering__(False)
-        if self.not_valid:
+        if not self.valid:
             self.__set_fingering__(True)
         
         return copy.deepcopy(self)
 
     def __set_fingering__(self, priority_4s):
-        self.not_valid = False
+        self.valid = True
         max_f, min_f = self.get_max_min_freat()
         last_finger = '0'
         
@@ -45,9 +41,9 @@ class Shape:
                 if f.finger == '5':
                     f.finger = "4s"
                     if last_finger == '4' or last_finger == '4s' or last_finger == '1s':
-                        self.not_valid = True
+                        self.valid = False
                 if f.finger == '1' and last_finger =='1s':
-                    self.not_valid = True
+                    self.valid = False
                 last_finger = f.finger
         
         elif (max_f - min_f == 4) and not priority_4s:
@@ -57,9 +53,9 @@ class Shape:
                 if f.finger == '0':
                     f.finger = "1s"
                     if last_finger == '1' or last_finger == '1s' or last_finger == '4s':
-                        self.not_valid = True
+                        self.valid = False
                 if f.finger == '1' and last_finger =='1s':
-                    self.not_valid = True
+                    self.valid = False
                 last_finger = f.finger
         
         elif max_f - min_f == 5:
@@ -69,16 +65,16 @@ class Shape:
                 if f.finger == '5':
                     f.finger = "4s"
                     if last_finger == '4' or last_finger == '4s' or last_finger == '1s':
-                        self.not_valid = True
+                        self.valid = False
                 elif f.finger == '0':
                     f.finger = '1s'
                     if last_finger == '1' or last_finger == '1s' or last_finger == '4s':
-                        self.not_valid = True
+                        self.valid = False
                 if f.finger == '1' and last_finger =='1s':
-                    self.not_valid = True
+                    self.valid = False
                 last_finger = f.finger
         else:
-            self.not_valid = True
+            self.valid = False
     
     def get_extensions(self):
         assert len(self.fingers) > 0

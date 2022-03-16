@@ -9,13 +9,13 @@ class DrawFreatboard:
     TEXT_FINGER = 2
     TEXT_NOTE = 3
     
-    def __init__(self, shape, init_freat=None, min_freats=4, text=1):
+    def __init__(self, min_freats=3, text=1):
         self.min_freats = min_freats
         self.figure, self.axes = plt.subplots(dpi=80)
         self.freat_size = 20
         self.string_separation = 10
         self.text = text
-        self.__draw_shape__(shape, init_freat)
+        # self.__draw_shape__(shape, init_freat)
         
     def __draw_freatboard__(self, freats, init_freat):
         if freats < self.min_freats:
@@ -52,7 +52,7 @@ class DrawFreatboard:
         self.axes.set_xlim(-self.freat_size/4, (freats+1)*self.freat_size)
         self.axes.set_ylim(-self.freat_size, self.string_separation*7)
         
-    def __draw_shape__(self, shape, init_freat=None):
+    def draw_shape(self, shape, init_freat=None):
         max_f, min_f = shape.get_max_min_freat()
         if init_freat is not None:
             min_f = init_freat    
@@ -67,6 +67,7 @@ class DrawFreatboard:
             self.axes.add_artist(circle)
             self.__add_finger_text__(shape, x, y, f)
         plt.show()
+        return self.figure
 
     def __add_finger_text__(self, shape, x, y, f):
         if self.text == DrawFreatboard.TEXT_FUNCTION:

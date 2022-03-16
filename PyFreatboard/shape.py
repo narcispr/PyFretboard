@@ -10,7 +10,8 @@ class Shape:
         return Shape(self.fingers + a)
     
     def plot(self, plot_type=DrawFreatboard.TEXT_FUNCTION):
-        DrawFreatboard(self, text=plot_type)
+        d = DrawFreatboard(text=plot_type)
+        return d.draw_shape(self)
 
     def get_max_min_freat(self):
         min_f = 100

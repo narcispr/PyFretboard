@@ -4,3 +4,4 @@ PyFreatboard.egg-info/*
 build/*
 dist/*
 *.pyc
+.vs/*

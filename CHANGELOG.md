@@ -1,4 +1,10 @@
 # Change log
+In version 0.3:
+- Improved tutorial with new SongXML features
+- Add SongXML examples: Autumn Leaves and Mercy, Mercy, Mercy
+- Add shapes generation from SongXml for scales, arppegios and drop2 chords
+- Add SongSML parsing
+- Add shape name when printing
 
 In version 0.2:
 

@@ -37,13 +37,13 @@ class DrawFreatboard:
         else:
             plt.show()
        
-    def draw_shape_vertical(self, shape, text=1, init_freat=None, show_string_names=False, return_fig=False):
+    def draw_shape_vertical(self, shape, text=1, shape_name=None, init_freat=None, show_string_names=False, return_fig=False):
         self.text = text
         figure, axes = plt.subplots(dpi=80)
         max_f, min_f = shape.get_max_min_freat()
         if init_freat is not None:
             min_f = init_freat    
-        self.__draw_freatboard_vertical__(axes, max_f - min_f, min_f, show_string_names)
+        self.__draw_freatboard_vertical__(axes, max_f - min_f, min_f, shape_name, show_string_names)
         for f in shape.fingers:
             y = (f.freat - min_f)*self.freat_size + self.freat_size/2
             x = 5*self.string_separation - DrawFreatboard.STRINGS.index(f.string)*self.string_separation
@@ -100,7 +100,7 @@ class DrawFreatboard:
         if shape_name is not None:
             axes.text(0, self.string_separation*6, shape_name, fontsize=12)
 
-    def __draw_freatboard_vertical__(self, axes, freats, init_freat, show_string_names):
+    def __draw_freatboard_vertical__(self, axes, freats, init_freat, shape_name, show_string_names):
         if freats < self.min_freats:
             freats = self.min_freats
         for s in range(6): # strings
@@ -136,6 +136,10 @@ class DrawFreatboard:
         axes.set_aspect(1)
         axes.set_xlim(-self.string_separation, self.string_separation*7)
         axes.set_ylim((freats+1)*self.freat_size, -self.freat_size/4)
+    
+        # Add shape name
+        if shape_name is not None:
+            axes.text(self.string_separation*2, -self.freat_size/2, shape_name, fontsize=12)
             
     
     def __add_finger_text__(self, axes, shape, x, y, f, is_vertical=False):

@@ -1,7 +1,7 @@
 from PyFreatboard.song_xml import parse_song_xml
 from PyFreatboard.build_shape import BuildShape
 from PyFreatboard.draw_freatboard import DrawFreatboard
-
+from os.path import join
 
 class Song:
     """Song class"""
@@ -68,12 +68,15 @@ class Song:
         return shapes
 
     @staticmethod
-    def draw_shapes(shapes, path='.', init_freat=None):
+    def draw_shapes(shapes, path='.', init_freat=None, vertical=False):
         draw = DrawFreatboard()
         for shape_name, all_shapes in zip(shapes.keys(), shapes.values()):
             for e, shape in enumerate(all_shapes):
                 if shape.valid:
                     min_freat = shape.get_max_min_freat()[1]
                     if init_freat is None or min_freat == init_freat or (min_freat + 1) == init_freat:
-                        f = draw.draw_shape(shape, shape_name=shape_name, return_fig=True)
-                        f.savefig('{}/__{}_{}.png'.format(path, shape_name, e), bbox_inches='tight')
+                        if vertical:
+                            f = draw.draw_shape_vertical(shape, shape_name=shape_name, return_fig=True)
+                        else:
+                            f = draw.draw_shape(shape, shape_name=shape_name, return_fig=True)
+                        f.savefig(join(path, '__{}_{}.png'.format(shape_name, e)), bbox_inches='tight')

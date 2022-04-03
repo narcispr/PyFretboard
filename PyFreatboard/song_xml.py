@@ -1,5 +1,5 @@
 from xml.dom.minidom import parse
-from section import Section, Chord, Note
+from PyFreatboard.section import Section, Chord, Note
 
 
 def parse_song_xml(xml_file_path):
@@ -56,9 +56,31 @@ def __get_root_and_type__(element):
         print("No root or type found")
 
 def __get_chords__(chord):
+    c = None
     try:
         root, type = __get_root_and_type__(chord)
         duration = chord.getElementsByTagName("duration")[0].firstChild.data
-        return Chord(root, type, int(duration))
+        c = Chord(root, type, int(duration))
     except:
         print("Invalid chord tag")
+    
+    # get section chords
+    melodies = chord.getElementsByTagName("melody")
+    for melody in melodies:
+        melody_id = melody.getAttribute("id")
+        notes = melody.getElementsByTagName("note")
+        melody_notes = []
+        for note in notes:
+            n = __get_note__(note)
+            melody_notes.append(n)
+        c.add_melody(melody_id, melody_notes)
+    return c
+
+def __get_note__(note):
+    try:
+        pitch = note.getElementsByTagName("pitch")[0].firstChild.data
+        octave = note.getElementsByTagName("octave")[0].firstChild.data
+        duration = note.getElementsByTagName("duration")[0].firstChild.data
+        return Note(pitch, int(octave), int(duration))
+    except:
+        print("No note pitch, octave or duration found")

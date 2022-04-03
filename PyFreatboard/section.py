@@ -16,17 +16,18 @@ class Chord:
         self.root = root
         self.type = type
         self.duration = duration
-        self.melody = []
+        self.melody = {}
     
-    def add_note(self, note):
-        self.melody.append(note)
+    def add_melody(self, id, notes):
+        self.melody[id] = notes
 
     def __str__(self):
         return "{}{} ({})".format(self.root, self.type, self.duration)
-
 class Note:
     def __init__(self, pitch, duration, octave):
         self.pitch = pitch
         self.duration = duration
         self.octave = octave
     
+    def __str__(self):
+        return "{}/{}({})".format(self.pitch, self.octave, self.duration)

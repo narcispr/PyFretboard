@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<song> 
+    <title>Autumn Leaves</title>
+    <author>Jonny Mercer</author>
+    <time> 
+        <beats>4</beats>
+        <beat-type>4</beat-type>
+    </time>
+    <section id="A1">
+        <scale> 
+            <root>G</root>
+            <type>Major</type>
+        </scale>
+        <chord> 
+            <root>A</root>
+            <type>-7</type>
+            <duration>4</duration>
+            <melody id="main">
+                <note>
+                    <pitch>C</pitch>
+                    <octave>4</octave>
+                    <duration>4</duration>
+                </note>
+            </melody>
+        </chord>
+        <chord> 
+            <root>D</root>
+            <type>7</type>
+            <duration>4</duration>
+            <melody id="main">
+                <note>
+                    <pitch>C</pitch>
+                    <octave>4</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>D</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>E</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>F#</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+            </melody>
+        </chord>
+        <chord> 
+            <root>G</root>
+            <type>Maj7</type>
+            <duration>4</duration>
+            <melody id="main">
+                <note>
+                    <pitch>B</pitch>
+                    <octave>3</octave>
+                    <duration>2</duration>
+                </note>
+                 <note>
+                    <pitch>B</pitch>
+                    <octave>3</octave>
+                    <duration>2</duration>
+                </note>
+            </melody>
+        </chord>
+        <chord> 
+            <root>C</root>
+            <type>Maj7</type>
+            <duration>4</duration>
+            <melody id="main">
+                <note>
+                    <pitch>B</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>C</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>D</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>E</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+            </melody>
+        </chord>
+    </section>
+        <section id="A2">
+        <scale> 
+            <root>E</root>
+            <type>Minor</type>
+        </scale>
+        <chord> 
+            <root>F#</root>
+            <type>-7b5</type>
+            <duration>4</duration>
+            <melody id="main">
+                <note>
+                    <pitch>A</pitch>
+                    <octave>3</octave>
+                    <duration>4</duration>
+                </note>
+            </melody>
+        </chord>
+        <chord> 
+            <root>B</root>
+            <type>7</type>
+            <duration>4</duration>
+            <melody id="main">
+                <note>
+                    <pitch>A</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>B</pitch>
+                    <octave>2</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>C#</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+                <note>
+                    <pitch>D#</pitch>
+                    <octave>3</octave>
+                    <duration>1</duration>
+                </note>
+            </melody>
+        </chord>
+        <chord> 
+            <root>E</root>
+            <type>-7</type>
+            <duration>8</duration>
+            <melody id="main">
+                <note>
+                    <pitch>G</pitch>
+                    <octave>3</octave>
+                    <duration>4</duration>
+                </note>
+            </melody>
+        </chord>
+    </section>
+</song>

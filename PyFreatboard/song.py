@@ -1,3 +1,4 @@
+from turtle import Shape
 from PyFreatboard.song_xml import parse_song_xml
 from PyFreatboard.build_shape import BuildShape
 from PyFreatboard.draw_freatboard import DrawFreatboard
@@ -6,13 +7,19 @@ from os.path import join
 class Song:
     """Song class"""
 
-    def __init__(self, xml_file_path):
+    def __init__(self, xml_file_path, autogen_shapes=False):
         """Parse XML song file into Song Object"""
         self.title, self.author, self.sections = parse_song_xml(xml_file_path)
-        self.scale_shapes = Song.__get_scales__(self.sections)
-        self.arpeggio_shapes = Song.__get_arpeggios__(self.sections)
-        self.drop2_shapes = Song.__get_drops2__(self.sections)
-        
+        if autogen_shapes:
+            self.scale_shapes = Song.__gen_scales__(self.sections)
+            self.arpeggio_shapes = Song.__gen_arpeggios__(self.sections)
+            self.drop2_shapes = Song.__gen_drops2__(self.sections)
+        else:
+            # self.scale_shapes = Song.__get_scales__(self.sections)
+            self.chord_shapes = Song.__get_chords__(self.sections)
+            # self.arpeggio_shapes = []
+            # self.drop2_shapes = []
+
     def get_scales(self):
         return self.scale_shapes
     
@@ -25,7 +32,7 @@ class Song:
     def get_melody(self, melody_id):
         melody = []
         for s in self.sections:
-            for c in s.chords:
+            for c in s.chord:
                 for m in c.melody.keys():
                     if m == melody_id:
                         melody += c.melody[m]
@@ -36,36 +43,52 @@ class Song:
 
     
     @staticmethod
-    def __get_scales__(sections):
+    def __gen_scales__(sections):
         """Get all scale shapes from song"""
         shapes = {}
         for section in sections:
-            key = section.root + section.type
-            if key not in shapes:
-                shapes[key] = BuildShape(section.root, section.type).all_shapes
+            for scale in section.scale:
+                key = scale.root + scale.type
+                if key not in shapes:
+                    shapes[key] = BuildShape(scale.root, scale.type).all_shapes
         return shapes
 
     @staticmethod
-    def __get_arpeggios__(sections):
+    def __gen_arpeggios__(sections):
         """Get all shapes from song"""
         shapes = {}
         for section in sections:
-            for chord in section.chords:
+            for chord in section.chord:
                 key = chord.root + chord.type
                 if key not in shapes:
                     shapes[key] = BuildShape(chord.root, chord.type).all_shapes
         return shapes
     
     @staticmethod
-    def __get_drops2__(sections):
+    def __gen_drops2__(sections):
         shapes = {}
         for section in sections:
-            for chord in section.chords:
+            for chord in section.chord:
                 key = chord.root + chord.type
                 if key not in shapes:
                     sh = BuildShape(chord.root, chord.type)
                     shapes[key] = sh.build_drop(drop=2, bass_string='D')
         return shapes
+
+    @staticmethod
+    def __get_chords__(sections):
+        shapes = {}
+        for section in sections:
+            for chord in section.chord:
+                for shape_id in chord.shape.keys():
+                    if chord.bass is not None:
+                        key = "{}/{} {} {}".format(chord.root, chord.bass, chord.type, shape_id)
+                    else:
+                        key = "{} {} {}".format(chord.root, chord.type, shape_id)
+
+                    if key not in shapes:
+                        shapes[key] = chord.shape[shape_id]
+        return shapes 
 
     @staticmethod
     def draw_shapes(shapes, path='.', init_freat=None, vertical=False):

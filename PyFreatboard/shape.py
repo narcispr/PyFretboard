@@ -1,9 +1,13 @@
 import copy
-from PyFreatboard.draw_freatboard import DrawFreatboard
+from PyFreatboard.finger import Finger
+
 
 class Shape:
+  
     SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
-
+    # TODO: Missing several augmented and diminished
+    # INTERVAL = {'2m': (1, 1), '2M': (1, 2), '3m': (2, 3), '3M': (2, 4), '4dism': (3, 4), '4': (3, 5), '4aug': (3, 6), '5dism': (4, 6), '5': (4, 7), '5aug': (4, 8), '6m': (5, 8), '6M': (5, 9), '7m': (6, 10), '7M': (6, 11)} # 'Interval name': (notes, semitones)
+   
     def __init__(self, fingers, shape_type=SHAPE_TYPE['ARPEGGIO']):
         self.fingers = fingers
         self.valid = True
@@ -26,6 +30,53 @@ class Shape:
             self.__set_fingering__(True)
         
         return copy.deepcopy(self)
+    
+    def get_extensions(self):
+        assert len(self.fingers) > 0
+        if self.fingers[0].finger == '':
+            self.set_fingering()
+        num_extensions = 0
+        for f in self.fingers:
+            if f.finger == '1s' or f.finger == '4s':
+                num_extensions += 1
+        return num_extensions
+
+
+    def transpose(self, interval):
+        over_12_freat = True
+        for f in self.fingers:
+            f.freat += interval[1]
+            if f.freat <= 12:
+                over_12_freat = False
+        if over_12_freat:
+            for f in self.fingers:
+                f.freat -= 12
+
+        for f in self.fingers:
+            f.pitch = Shape.__transpose_pitch__(f.pitch, interval)
+            f.semitone = Finger.NOTES[f.pitch]
+
+    @staticmethod
+    def get_interval(pitch1, pitch2):
+        pitch1_note = Finger.NOTES7.index(pitch1[0])
+        pitch2_note = Finger.NOTES7.index(pitch2[0])
+        note_interval = (pitch2_note - pitch1_note) % 7
+        semitones1 = Finger.NOTES[pitch1]
+        semitones2 = Finger.NOTES[pitch2]
+        semitones_interval = (semitones2 - semitones1) % 12
+        return (note_interval, semitones_interval)
+
+    @staticmethod
+    def __transpose_pitch__(pitch, interval):
+        pitch_note = Finger.NOTES7.index(pitch[0])
+        base_note = Finger.NOTES7[(pitch_note + interval[0])%7]
+        semitones = (Finger.NOTES[pitch] + interval[1]) % 12
+        for k, s in zip(Finger.NOTES.keys(), Finger.NOTES.values()):
+            if s == semitones:
+                if k[0] == base_note:
+                    return k
+        print("Error: Could not transpose pitch")
+        return None
 
     def __set_fingering__(self, priority_4s):
         self.valid = True
@@ -78,16 +129,6 @@ class Shape:
                 last_finger = f.finger
         else:
             self.valid = False
-    
-    def get_extensions(self):
-        assert len(self.fingers) > 0
-        if self.fingers[0].finger == '':
-            self.set_fingering()
-        num_extensions = 0
-        for f in self.fingers:
-            if f.finger == '1s' or f.finger == '4s':
-                num_extensions += 1
-        return num_extensions
 
     def __lt__(self, shape):
         return self.get_max_min_freat()[1] < shape.get_max_min_freat()[1]

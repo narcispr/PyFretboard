@@ -7,7 +7,7 @@ class Finger:
     guitar_strings = ['e', 'B', 'G', 'D', 'A', 'E']
     strings_semitones = [24, 19, 15, 10, 5, 0]
 
-    def __init__(self, semitone, function, string, freat, finger="", pitch=None, visual=0):
+    def __init__(self, semitone, function, string, freat, finger="", pitch=None, barrel=False, visual=0):
         self.semitone = semitone
         if pitch is None:
             self.pitch = Finger.SEMITONE_TO_PITCH[semitone % 12]
@@ -17,6 +17,7 @@ class Finger:
         self.string = string
         self.freat = freat
         self.finger = finger
+        self.barrel = barrel
         self.visual = visual
         
     def dist(self, f):

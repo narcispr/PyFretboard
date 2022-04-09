@@ -1,4 +1,5 @@
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt, patches
+
 
 class DrawFreatboard:
     STRINGS = ['e', 'B', 'G', 'D', 'A', 'E']
@@ -45,6 +46,7 @@ class DrawFreatboard:
         if init_freat is not None:
             min_f = init_freat    
         self.__draw_freatboard_vertical__(axes, max_f - min_f, min_f, shape_name, show_string_names)
+        self.__draw_barrel__(shape, min_f, axes)
         for f in shape.fingers:
             y = (f.freat - min_f)*self.freat_size + self.freat_size/2
             x = 5*self.string_separation - DrawFreatboard.STRINGS.index(f.string)*self.string_separation
@@ -59,6 +61,32 @@ class DrawFreatboard:
         else:
             plt.show()
 
+    def __draw_barrel__(self, shape, min_f, axes):
+        barrel_fingers = []
+        for f in shape.fingers:
+            if f.barrel:
+                barrel_fingers.append(f)
+        print(len(barrel_fingers))
+        min_pos = [999, 999]
+        max_pos = [-999, -999]
+        if len(barrel_fingers) >= 2:
+            for f in barrel_fingers:
+                y = (f.freat - min_f)*self.freat_size + self.freat_size/2
+                x = 5*self.string_separation - DrawFreatboard.STRINGS.index(f.string)*self.string_separation
+                if x < min_pos[0]:
+                    min_pos[0] = x
+                if x > max_pos[0]:
+                    max_pos[0] = x
+                if y < min_pos[1]:
+                    min_pos[1] = y
+                if y > max_pos[1]:
+                    max_pos[1] = y
+            circle = plt.Circle(min_pos, self.freat_size/4, color='dimgrey', fill=True, zorder=2)
+            axes.add_artist(circle)
+            circle = plt.Circle(max_pos, self.freat_size/4, color='dimgrey', fill=True, zorder=2)
+            axes.add_artist(circle)
+            rect = patches.Rectangle((min_pos[0], min_pos[1] - 0.25 - self.freat_size/4), max_pos[0]-min_pos[0], self.freat_size/2 + 0.125, color='dimgrey', zorder=2)
+            axes.add_patch(rect)
 
     def __draw_freatboard__(self, axes, freats, init_freat, shape_name, show_string_names):
         if freats < self.min_freats:

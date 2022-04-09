@@ -135,9 +135,10 @@ def __get_finger__(finger):
     except:
         pass
     try:
-        barrel = bool(finger.getElementsByTagName("barrel")[0].firstChild.data)
+        barrel = finger.getElementsByTagName("barrel")[0].firstChild.data
+        barrel = barrel in ['true', 'True', 'TRUE']
     except:
-        pass
+        print("Barrel not found")
     try:
         visual = int(finger.getElementsByTagName("visual")[0].firstChild.data)
     except:
@@ -145,7 +146,7 @@ def __get_finger__(finger):
     # TODO: Check Pitch to semitones!
     # TODO: barrel not used
     semitone = Finger.NOTES[pitch]
-    return Finger(semitone, function, string, freat, fingering, pitch, visual)
+    return Finger(semitone=semitone, function=function, string=string, freat=freat, finger=fingering, pitch=pitch, barrel=barrel, visual=visual)
 
 
 def __get_note__(note):

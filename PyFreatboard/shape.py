@@ -2,9 +2,12 @@ import copy
 from PyFreatboard.draw_freatboard import DrawFreatboard
 
 class Shape:
-    def __init__(self, fingers):
+    SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
+
+    def __init__(self, fingers, shape_type=SHAPE_TYPE['ARPEGGIO']):
         self.fingers = fingers
         self.valid = True
+        self.type = shape_type
 
     def __add__(self, a):
         return Shape(self.fingers + a)

@@ -12,6 +12,7 @@
             <type>Maj7</type>
             <duration>4</duration>
             <shape id="root 6th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>E</string>
@@ -50,6 +51,7 @@
                 </finger>
             </shape>
             <shape id="root 5th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>A</string>
@@ -94,6 +96,7 @@
             <type>-7</type>
             <duration>4</duration>
             <shape id="root 6th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>E</string>
@@ -132,6 +135,7 @@
                 </finger>
             </shape>
             <shape id="root 5th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>A</string>
@@ -176,6 +180,7 @@
             <type>7</type>
             <duration>4</duration>
             <shape id="root 6th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>E</string>
@@ -214,6 +219,7 @@
                 </finger>
             </shape>
             <shape id="root 5th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>A</string>
@@ -257,6 +263,7 @@
             <type>-7b5</type>
             <duration>4</duration>
             <shape id="root 6th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>E</string>
@@ -295,6 +302,7 @@
                 </finger>
             </shape>
             <shape id="root 5th">
+                <type>strum</type>
                 <finger>
                     <pitch>C</pitch>
                     <string>A</string>

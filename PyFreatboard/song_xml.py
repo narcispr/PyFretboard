@@ -98,6 +98,11 @@ def __get_chords__(chord):
 def __get_shapes__(shapes):
     sh = {}
     for shape in shapes:
+        shape_type = "ARPEGGIO"
+        try:
+            shape_type = (shape.getElementsByTagName("type")[0].firstChild.data).upper()
+        except:
+            pass
         try:
             shape_id = shape.getAttribute("id")
             fingers = shape.getElementsByTagName("finger")
@@ -105,7 +110,7 @@ def __get_shapes__(shapes):
             for finger in fingers:
                 f = __get_finger__(finger)
                 all_fingers.append(f)
-            sh[shape_id] = Shape(all_fingers)
+            sh[shape_id] = Shape(all_fingers, shape_type)
         except:
             print("Invalid shape tag")
     return sh

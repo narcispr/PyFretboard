@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="song">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" type="xs:string" />
+        <xs:element name="author" type="xs:string" />
+        <xs:element name="time">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="beats" type="xs:string" />
+              <xs:element name="beat-type" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="section">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="chord" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="root" type="xs:string" />
+                    <xs:element name="type" type="xs:string" />
+                    <xs:element name="duration" type="xs:string" />
+                    <xs:element name="shape" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="type" type="xs:string" />
+                          <xs:element name="fingers">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="finger" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="pitch" type="xs:string" />
+                                      <xs:element name="string" type="xs:string" />
+                                      <xs:element name="freat" type="xs:string" />
+                                      <xs:element name="function" type="xs:string" />
+                                      <xs:element name="fingering" type="xs:string" />
+                                      <xs:element name="barrel" type="xs:string" />
+                                      <xs:element name="visual" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

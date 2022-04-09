@@ -23,6 +23,9 @@ class Finger:
         s_num = Finger.guitar_strings.index(self.string)
         f_num = Finger.guitar_strings.index(f.string)
         return (Finger.strings_semitones[s_num] + self.freat) - (Finger.strings_semitones[f_num] + f.freat)
+    
+    def to_xml(self):
+        return "     <finger>\n      <pitch>{}</pitch>\n      <string>{}</string>\n      <freat>{}</freat>\n      <function>{}</function>\n      <fingering>{}</fingering>\n      <barrel>False</barrel>\n      <visual>{}</visual>\n     </finger>".format(self.pitch, self.string, self.freat, self.function, self.finger, self.visual)
         
     def __eq__(self, f):
         return self.freat == f.freat and self.string == f.string and self.finger == f.finger

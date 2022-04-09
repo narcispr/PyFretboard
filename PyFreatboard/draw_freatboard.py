@@ -38,6 +38,7 @@ class DrawFreatboard:
             plt.show()
        
     def draw_shape_vertical(self, shape, text=1, shape_name=None, init_freat=None, show_string_names=False, return_fig=False):
+        self.min_freats = 2
         self.text = text
         figure, axes = plt.subplots(dpi=80)
         max_f, min_f = shape.get_max_min_freat()
@@ -62,6 +63,9 @@ class DrawFreatboard:
     def __draw_freatboard__(self, axes, freats, init_freat, shape_name, show_string_names):
         if freats < self.min_freats:
             freats = self.min_freats
+        elif freats == self.min_freats:
+            freats = self.min_freats + 1
+
         for s in range(6): # strings
             axes.plot([0, freats*self.freat_size + self.freat_size], [s*self.string_separation, s*self.string_separation], '-', color='gray')
         for f in range(freats + 1): # freats
@@ -101,8 +105,12 @@ class DrawFreatboard:
             axes.text(0, self.string_separation*6, shape_name, fontsize=12)
 
     def __draw_freatboard_vertical__(self, axes, freats, init_freat, shape_name, show_string_names):
-        if freats < self.min_freats:
+        if freats == self.min_freats:
+            freats = self.min_freats + 1
+        elif freats < self.min_freats:
             freats = self.min_freats
+        
+            
         for s in range(6): # strings
             axes.plot([s*self.string_separation, s*self.string_separation], [0, (freats + 1) * self.freat_size], '-', color='gray')
         for f in range(freats + 1): # freats
@@ -159,7 +167,8 @@ class DrawFreatboard:
             else:
                 axes.text(x-1.75, y-y_offset, f.finger, fontsize=12, color='white')
         elif self.text == DrawFreatboard.TEXT_NOTE:
-            note = DrawFreatboard.NOTE_NAME[f.semitone]
+            # note = DrawFreatboard.NOTE_NAME[f.semitone]
+            note = f.pitch
             if len(note) == 2:
                 axes.text(x-2.75, y-y_offset, note, fontsize=12, color='white')
             else:

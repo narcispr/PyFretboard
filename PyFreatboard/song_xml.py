@@ -143,10 +143,7 @@ def __get_finger__(finger):
         visual = int(finger.getElementsByTagName("visual")[0].firstChild.data)
     except:
         pass
-    # TODO: Check Pitch to semitones!
-    # TODO: barrel not used
-    semitone = Finger.NOTES[pitch]
-    return Finger(semitone=semitone, function=function, string=string, freat=freat, finger=fingering, pitch=pitch, barrel=barrel, visual=visual)
+    return Finger(function=function, string=string, freat=freat, finger=fingering, pitch=pitch, barrel=barrel, visual=visual)
 
 
 def __get_note__(note):

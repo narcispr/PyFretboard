@@ -3,7 +3,8 @@ from PyFreatboard.finger import Finger
 
 
 class Shape:
-  
+    
+    # TODO: Move all definitions to definitions file!
     SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
     SHAPE_TYPE_INV = ['arpeggio', 'strum']
     

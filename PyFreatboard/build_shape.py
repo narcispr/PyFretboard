@@ -1,9 +1,10 @@
 from PyFreatboard.shape import Shape
 from PyFreatboard.finger import Finger
-from PyFreatboard.draw_freatboard import DrawFreatboard
 
 
 class BuildShape:
+
+    # TODO: Move all definitions to definitions file!
     SHAPES = {
         'TriadMaj' : ['1', '3', '5'],
         'TriadMin' : ['1', 'b3', '5'],
@@ -96,9 +97,9 @@ class BuildShape:
                 freat = n - Finger.NOTES[string.upper()]
                 if freat < 0:
                     freat += 12
-                fingers.append(Finger(n, h, string, freat, None))
+                fingers.append(Finger(h, string, freat, None))
                 if freat < 5:
-                    fingers.append(Finger(n, h, string, freat + 12, None))    
+                    fingers.append(Finger(h, string, freat + 12, None))    
         return fingers
 
     def filter_shapes(self, shapes):
@@ -204,10 +205,3 @@ class BuildShape:
                     if Finger.guitar_strings.index(d.fingers[f].string) != (Finger.guitar_strings.index(d.fingers[f+1].string) + 1):
                         d.valid = False
         return drops
-
-if __name__ == "__main__":
-    drop = BuildShape('D', '-7', 1)
-    drops = drop.build_drop(drop=2, bass_string="A")
-    for d in drops:
-        if d.valid:
-           d.plot(plot_type=DrawFreatboard.TEXT_NOTE)

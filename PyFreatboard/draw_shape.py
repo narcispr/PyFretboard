@@ -41,13 +41,18 @@ class DrawShape:
         self.string_separation = 13
         self.font_size = 18
         self.text = text
+        crosses_strings = [True]*6
         figure, axes = plt.subplots(dpi=100)
         max_f, min_f = shape.get_max_min_freat()
         if init_freat is not None:
             min_f = init_freat    
-        self.__draw_freatboard_vertical__(axes, max_f - min_f, min_f, shape_name, show_string_names)
+        freats = max_f - min_f
+        if freats < self.min_freats:
+            freats = self.min_freats
+        self.__draw_freatboard_vertical__(axes, freats, min_f, shape_name, show_string_names)
         self.__draw_barrel__(shape, min_f, axes)
         for f in shape.fingers:
+            crosses_strings[PF.STRINGS.index(f.string)] = False
             y = (f.freat - min_f)*self.freat_size + self.freat_size/2
             x = 5*self.string_separation - PF.STRINGS.index(f.string)*self.string_separation
             if f.function == '1':
@@ -56,6 +61,14 @@ class DrawShape:
                 circle = plt.Circle((x, y), self.dot_size*1.2, color='k', fill=True, zorder=2)
             axes.add_artist(circle)
             self.__add_finger_text__(axes, shape, x, y, f, is_vertical=True)
+            if self.text != PF.TEXT_FINGER:
+                axes.text(x - 2, self.freat_size*(freats + 1.4), f.finger, fontsize=self.font_size)
+    
+        for e, c in enumerate(crosses_strings):
+            if c:
+                x = 5*self.string_separation - e*self.string_separation
+                axes.text(x - 2, -2, 'X', fontsize=self.font_size)
+    
         if return_fig:
             return figure
         else:
@@ -66,7 +79,6 @@ class DrawShape:
         for f in shape.fingers:
             if f.barrel:
                 barrel_fingers.append(f)
-        print(len(barrel_fingers))
         min_pos = [999, 999]
         max_pos = [-999, -999]
         if len(barrel_fingers) >= 2:
@@ -123,7 +135,7 @@ class DrawShape:
                     axes.add_artist(circle)
 
         # Add starting fret
-        plt.text(8, -self.string_separation, str(init_freat), fontsize=self.font_size)
+        plt.text(4, -self.string_separation*1.2, str(init_freat)+" fr", fontsize=self.font_size)
         axes.set_aspect(1)
         axes.set_xlim(-self.freat_size/4, (freats+1)*self.freat_size)
         axes.set_ylim(-self.freat_size, self.string_separation*7)
@@ -132,12 +144,7 @@ class DrawShape:
         if shape_name is not None:
             axes.text(0, self.string_separation*6, shape_name, fontsize=self.font_size)
 
-    def __draw_freatboard_vertical__(self, axes, freats, init_freat, shape_name, show_string_names):
-        if freats == self.min_freats:
-            freats = self.min_freats + 1
-        elif freats < self.min_freats:
-            freats = self.min_freats
-            
+    def __draw_freatboard_vertical__(self, axes, freats, init_freat, shape_name, show_string_names):    
         for s in range(6): # strings
             axes.plot([s*self.string_separation, s*self.string_separation], [0, (freats + 1) * self.freat_size], '-', color='gray')
         for f in range(freats + 1): # freats
@@ -167,14 +174,14 @@ class DrawShape:
                     axes.add_artist(circle)
 
         # Add starting fret
-        plt.text(-self.string_separation, self.freat_size/2, str(init_freat), fontsize=self.font_size)
+        plt.text(self.string_separation * 5.6, self.freat_size/1.5, str(init_freat) + " fr", fontsize=self.font_size)
         axes.set_aspect(1)
         axes.set_xlim(-self.string_separation, self.string_separation*7)
         axes.set_ylim((freats+1)*self.freat_size, -self.freat_size/4)
     
         # Add shape name
         if shape_name is not None:
-            axes.text(-self.string_separation, -self.freat_size/2, shape_name, fontsize=self.font_size)
+            axes.text(0, -self.freat_size/2, shape_name, fontsize=self.font_size*1.5)
     
     def __add_finger_text__(self, axes, shape, x, y, f, is_vertical=False):
         if is_vertical:

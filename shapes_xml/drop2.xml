@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<song xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="song_xml.xsd">
+<song xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="song_xml.xsd">
  
     <title>Drop2 shapes</title>
     <author>Narcís Palomeras</author>

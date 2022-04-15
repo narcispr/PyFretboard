@@ -38,8 +38,7 @@ def __parse_section__(section):
     try:
         scales = section.getElementsByTagName("scale")
         for scale in scales:
-            root, type = __get_root_and_type__(scale)
-            s = Scale(root, type)
+            s = __get_scale__(scale)
             sec_obj.add_scale(s)
     except:
         pass
@@ -53,6 +52,15 @@ def __parse_section__(section):
     except:
         pass
     return sec_obj
+
+def __get_scale__(element):
+    root, type = __get_root_and_type__(element)
+    s = Scale(root, type)
+    # get shapes
+    shapes = element.getElementsByTagName("shape")
+    s.shape = __get_shapes__(shapes)
+    return s
+            
 
 def __get_root_and_type__(element):
     """Get root and type from scale or chord tag"""

@@ -14,7 +14,7 @@ class Song:
             self.arpeggio_shapes = Song.__gen_arpeggios__(self.sections)
             self.drop2_shapes = Song.__gen_drops2__(self.sections)
         else:
-            # self.scale_shapes = Song.__get_scales__(self.sections)
+            self.scale_shapes = Song.__get_scales__(self.sections)
             self.chord_shapes = Song.__get_chords__(self.sections)
             # self.arpeggio_shapes = []
             # self.drop2_shapes = []
@@ -87,6 +87,17 @@ class Song:
 
                     if key not in shapes:
                         shapes[key] = chord.shape[shape_id]
+        return shapes 
+    
+    @staticmethod
+    def __get_scales__(sections):
+        shapes = {}
+        for section in sections:
+            for scale in section.scale:
+                for shape_id in scale.shape.keys():
+                    key = "{} {} {}".format(scale.root, scale.type, shape_id)
+                    if key not in shapes:
+                        shapes[key] = scale.shape[shape_id]
         return shapes 
 
     @staticmethod

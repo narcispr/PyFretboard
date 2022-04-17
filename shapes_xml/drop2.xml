@@ -176,6 +176,167 @@
                     </finger>
                 </fingers>
             </shape>
+            
+            <shape id="drop2 set 2 3 top">
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <freat>3</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>D</string>
+                        <freat>5</freat>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>G</string>
+                        <freat>4</freat>
+                        <function>7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>B</string>
+                        <freat>5</freat>
+                        <function>3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 5 top">
+                <fingers>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>A</string>
+                        <freat>7</freat>
+                        <function>3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>D</string>
+                        <freat>9</freat>
+                        <function>7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>G</string>
+                        <freat>5</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>B</string>
+                        <freat>8</freat>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 7 top">
+                <fingers>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <freat>10</freat>
+                        <function>5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <freat>10</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>G</string>
+                        <freat>9</freat>
+                        <function>3</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>B</string>
+                        <freat>12</freat>
+                        <function>7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 1 top">
+                <fingers>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>A</string>
+                        <freat>14</freat>
+                        <function>7</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>D</string>
+                        <freat>14</freat>
+                        <function>3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>G</string>
+                        <freat>12</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>B</string>
+                        <freat>13</freat>
+                        <function>1</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
         </chord>
 
         <chord>
@@ -198,7 +359,7 @@
                         <pitch>Bb</pitch>
                         <string>G</string>
                         <freat>3</freat>
-                        <function>n7</function>
+                        <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -346,6 +507,168 @@
                     </finger>
                 </fingers>
             </shape>
+        
+            <shape id="drop2 set 2 3 top">
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <freat>3</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>D</string>
+                        <freat>5</freat>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>G</string>
+                        <freat>3</freat>
+                        <function>b7</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>B</string>
+                        <freat>5</freat>
+                        <function>3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 5 top">
+                <fingers>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>A</string>
+                        <freat>7</freat>
+                        <function>3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>D</string>
+                        <freat>8</freat>
+                        <function>b7</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>G</string>
+                        <freat>5</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>B</string>
+                        <freat>8</freat>
+                        <function>5</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 b7 top">
+                <fingers>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <freat>10</freat>
+                        <function>5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <freat>10</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>G</string>
+                        <freat>9</freat>
+                        <function>3</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>B</string>
+                        <freat>11</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 1 top">
+                <fingers>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>A</string>
+                        <freat>13</freat>
+                        <function>b7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>D</string>
+                        <freat>14</freat>
+                        <function>3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>G</string>
+                        <freat>12</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>B</string>
+                        <freat>13</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+      
         </chord>
 
         <chord>
@@ -368,7 +691,7 @@
                         <pitch>Bb</pitch>
                         <string>G</string>
                         <freat>3</freat>
-                        <function>n7</function>
+                        <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -516,6 +839,167 @@
                     </finger>
                 </fingers>
             </shape>
+       
+            <shape id="drop2 set 2 3 top">
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <freat>3</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>D</string>
+                        <freat>5</freat>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>G</string>
+                        <freat>3</freat>
+                        <function>b7</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>B</string>
+                        <freat>4</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 5 top">
+                <fingers>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <freat>6</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>D</string>
+                        <freat>8</freat>
+                        <function>b7</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>G</string>
+                        <freat>5</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>B</string>
+                        <freat>8</freat>
+                        <function>5</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 b7 top">
+                <fingers>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <freat>10</freat>
+                        <function>5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <freat>10</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>G</string>
+                        <freat>8</freat>
+                        <function>b3</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>B</string>
+                        <freat>11</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 1 top">
+                <fingers>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>A</string>
+                        <freat>13</freat>
+                        <function>b7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <freat>13</freat>
+                        <function>b3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>G</string>
+                        <freat>12</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>B</string>
+                        <freat>13</freat>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
         </chord>
 
         <chord>
@@ -538,7 +1022,7 @@
                         <pitch>Bb</pitch>
                         <string>G</string>
                         <freat>3</freat>
-                        <function>n7</function>
+                        <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -686,6 +1170,169 @@
                     </finger>
                 </fingers>
             </shape>
+
+       
+            <shape id="drop2 set 2 3 top">
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <freat>3</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Gb</pitch>
+                        <string>D</string>
+                        <freat>4</freat>
+                        <function>b5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>G</string>
+                        <freat>3</freat>
+                        <function>b7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>B</string>
+                        <freat>4</freat>
+                        <function>b3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 5 top">
+                <fingers>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <freat>6</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>D</string>
+                        <freat>8</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>G</string>
+                        <freat>5</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Gb</pitch>
+                        <string>B</string>
+                        <freat>7</freat>
+                        <function>b5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 b7 top">
+                <fingers>
+                    <finger>
+                        <pitch>Gb</pitch>
+                        <string>A</string>
+                        <freat>9</freat>
+                        <function>b5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <freat>10</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>G</string>
+                        <freat>8</freat>
+                        <function>b3</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>B</string>
+                        <freat>11</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="drop2 set 2 1 top">
+                <fingers>
+                    <finger>
+                        <pitch>Bb</pitch>
+                        <string>A</string>
+                        <freat>13</freat>
+                        <function>b7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <freat>13</freat>
+                        <function>b3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Gb</pitch>
+                        <string>G</string>
+                        <freat>11</freat>
+                        <function>b5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>B</string>
+                        <freat>13</freat>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+      
         </chord>
     </section>
 </song>

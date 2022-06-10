@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<song>
+    <title>Jazz Blues in F</title>
+    <author>Popular</author>
+    <time>
+        <beats>4</beats>
+        <beat-type>4</beat-type>
+    </time>
+    <section id="A1">
+        <scale>
+            <root>F</root>
+            <type>Mixolydian</type>
+        </scale>
+        <scale>
+            <root>F</root>
+            <type>Pentatonic</type>
+        </scale>
+        <chord>
+            <root>F</root>
+            <type>7</type>
+            <duration>4</duration>
+        </chord>
+    </section>
+    <section id="A2">
+        <scale>
+            <root>Bb</root>
+            <type>Mixolydian</type>
+        </scale>
+        <scale>
+            <root>F</root>
+            <type>Pentatonic</type>
+        </scale>
+        <chord>
+            <root>B</root>
+            <type>7</type>
+            <duration>4</duration>
+        </chord>
+    </section>
+    <section id="A3">
+        <chord>
+            <root>B</root>
+            <type>Dism</type>
+            <duration>4</duration>
+        </chord>
+    </section>
+    <section id="A4">
+        <scale>
+            <root>D</root>
+            <type>Mixolydianb9#9b13</type>
+        </scale>
+        <chord>
+            <root>D</root>
+            <type>7</type>
+            <duration>4</duration>
+        </chord>
+    </section>
+    <section id="B1">
+        <scale>
+            <root>G</root>
+            <type>Dorian</type>
+        </scale>
+        <chord>
+            <root>G</root>
+            <type>-7</type>
+            <duration>4</duration>
+        </chord>
+    </section>
+    <section id="B2">
+        <scale>
+            <root>C</root>
+            <type>Mixolydian</type>
+        </scale>
+        <chord>
+            <root>C</root>
+            <type>7</type>
+            <duration>4</duration>
+        </chord>
+    </section>
+    <section id="Turnaround">
+        <chord>
+            <root>F</root>
+            <type>7</type>
+            <duration>2</duration>
+        </chord>
+        <chord>
+            <root>D</root>
+            <type>7</type>
+            <duration>2</duration>
+        </chord>
+        <chord>
+            <root>G</root>
+            <type>-7</type>
+            <duration>2</duration>
+        </chord>
+        <chord>
+            <root>C</root>
+            <type>7</type>
+            <duration>2</duration>
+        </chord>
+    </section>
+    
+    <structure>
+        <sec>A1</sec>
+        <sec>A2</sec>
+        <sec>A1</sec>
+        <sec>A1</sec>
+        <sec>A2</sec>
+        <sec>A3</sec>
+        <sec>A1</sec>
+        <sec>A4</sec>
+        <sec>B1</sec>
+        <sec>B2</sec>
+        <sec>Turnaround</sec>
+    </structure>
+</song>
+    
+    

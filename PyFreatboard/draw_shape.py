@@ -103,8 +103,7 @@ class DrawShape:
     def __draw_freatboard__(self, axes, freats, init_freat, shape_name, show_string_names):
         if freats < self.min_freats:
             freats = self.min_freats
-        elif freats == self.min_freats:
-            freats = self.min_freats + 1
+        
 
         for s in range(6): # strings
             axes.plot([0, freats*self.freat_size + self.freat_size], [s*self.string_separation, s*self.string_separation], '-', color='gray')
@@ -181,7 +180,7 @@ class DrawShape:
     
         # Add shape name
         if shape_name is not None:
-            axes.text(0, -self.freat_size/2, shape_name, fontsize=self.font_size*1.5)
+            axes.text(0, -self.freat_size/2, shape_name, fontsize=self.font_size*1.2) #1.5
     
     def __add_finger_text__(self, axes, shape, x, y, f, is_vertical=False):
         if is_vertical:

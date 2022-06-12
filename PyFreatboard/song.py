@@ -19,6 +19,18 @@ class Song:
             # self.arpeggio_shapes = []
             # self.drop2_shapes = []
 
+    def get_scale_type_at_root(self, scale_type, root):
+        shapes = []
+        for section in self.sections:
+            for scale in section.scale:
+                if scale.type == scale_type:
+                    for shape_id in scale.shape.keys():
+                        s = scale.shape[shape_id]
+                        interval = s.get_interval(scale.root, root)
+                        s.transpose(interval)
+                        shapes.append(s)
+        return shapes
+
     def get_scales(self):
         return self.scale_shapes
     

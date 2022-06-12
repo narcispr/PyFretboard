@@ -1,6 +1,4 @@
 from xml.dom.minidom import parse
-
-from sympy import E
 from PyFreatboard.section import Section, Scale, Chord, Note
 from PyFreatboard.finger import Finger
 from PyFreatboard.shape import Shape

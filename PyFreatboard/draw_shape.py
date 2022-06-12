@@ -21,9 +21,16 @@ class DrawShape:
             x = (f.freat - min_f)*self.freat_size + self.freat_size/2
             y = 5*self.string_separation - PF.STRINGS.index(f.string)*self.string_separation
             if f.function == '1':
-                circle = plt.Circle((x, y), self.dot_size, color='r', fill=True, zorder=2)
+                if f.visual == 0:
+                    circle = plt.Circle((x, y), self.dot_size, color='r', fill=True, zorder=2)
+                else:
+                    circle = plt.Circle((x, y), self.dot_size, color='pink', fill=True, zorder=2)        
             else:
-                circle = plt.Circle((x, y), self.dot_size, color='k', fill=True, zorder=2)
+                if f.visual == 0:
+                    circle = plt.Circle((x, y), self.dot_size, color='k', fill=True, zorder=2)
+                else:
+                    circle = plt.Circle((x, y), self.dot_size, color='gray', fill=True, zorder=2)
+                    
             axes.add_artist(circle)
             if show_extension:
                 if f.finger in ['1s', '4s']:

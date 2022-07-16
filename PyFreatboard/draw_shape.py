@@ -196,21 +196,22 @@ class DrawShape:
             y_offset = 1.5 + (self.font_size - 12) * 0.1
         
         len1 = 1.75 + (self.font_size - 12) * 0.14
-        len2 = 2.75 + (self.font_size - 12) * 0.14
+        len2 = 3.5 + (self.font_size - 12) * 0.14
+        len3 = 3.5 + (self.font_size - 12) * 0.14
+
+        size = self.font_size
+        l = len1
+        if len(f.function) == 2:
+            l = len2
+        elif len(f.function) == 3:
+            l = len3
+            size = self.font_size * 0.8
 
         if self.text == PF.TEXT_FUNCTION:
-            if len(f.function) == 2:
-                axes.text(x-len2, y-y_offset, f.function, fontsize=self.font_size, color='white')
-            else:
-                axes.text(x-len1, y-y_offset, f.function, fontsize=self.font_size, color='white')
+            axes.text(x-l, y-y_offset, f.function, fontsize=size, color='white')
         elif self.text == PF.TEXT_FINGER:
-            if len(f.finger) == 2:
-                axes.text(x-len2, y-y_offset, f.finger, fontsize=self.font_size, color='white')
-            else:
-                axes.text(x-len1, y-y_offset, f.finger, fontsize=self.font_size, color='white')
+            axes.text(x-l, y-y_offset, f.finger, fontsize=size, color='white')
         elif self.text == PF.TEXT_PITCH:
             note = f.pitch
-            if len(note) == 2:
-                axes.text(x-len2, y-y_offset, note, fontsize=self.font_size, color='white')
-            else:
-                axes.text(x-len1, y-y_offset, note, fontsize=self.font_size, color='white')
+            axes.text(x-l, y-y_offset, note, fontsize=size, color='white')
+           

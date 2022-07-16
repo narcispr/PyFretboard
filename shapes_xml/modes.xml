@@ -5574,15 +5574,24 @@
 
         <scale>
             <root>E</root>
-            <type>Mixob9#9b13</type>
-            <shape id="x1">
+            <type>Mixolydianb9#9b13</type>
+            <shape id="type1">
                 <type>arpeggio</type>
                 <fingers>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>E</string>
+                        <freat>1</freat>
+                        <function>b9</function>
+                        <fingering>1s</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
                     <finger>
                         <pitch>G</pitch>
                         <string>E</string>
                         <freat>3</freat>
-                        <function>#2</function>
+                        <function>#9</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5618,7 +5627,7 @@
                         <pitch>C</pitch>
                         <string>A</string>
                         <freat>3</freat>
-                        <function>b6</function>
+                        <function>b13</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5645,7 +5654,7 @@
                         <pitch>F</pitch>
                         <string>D</string>
                         <freat>3</freat>
-                        <function>b2</function>
+                        <function>b9</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5654,21 +5663,11 @@
                         <pitch>G</pitch>
                         <string>D</string>
                         <freat>5</freat>
-                        <function>#2</function>
+                        <function>#9</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
                     </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>D</string>
-                        <freat>6</freat>
-                        <function>3</function>
-                        <fingering>4s</fingering>
-                        <barrel>False</barrel>
-                        <visual>1</visual>
-                    </finger>
-
                     <finger>
                         <pitch>G#</pitch>
                         <string>G</string>
@@ -5676,9 +5675,8 @@
                         <function>3</function>
                         <fingering>1s</fingering>
                         <barrel>False</barrel>
-                        <visual>2</visual>
+                        <visual>0</visual>
                     </finger>
-
                     <finger>
                         <pitch>A</pitch>
                         <string>G</string>
@@ -5701,7 +5699,7 @@
                         <pitch>C</pitch>
                         <string>G</string>
                         <freat>5</freat>
-                        <function>b6</function>
+                        <function>b13</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5724,31 +5722,20 @@
                         <barrel>False</barrel>
                         <visual>0</visual>
                     </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>B</string>
-                        <freat>6</freat>
-                        <function>b2</function>
-                        <fingering>4s</fingering>
-                        <barrel>False</barrel>
-                        <visual>1</visual>
-                    </finger>
-
                     <finger>
                         <pitch>F</pitch>
                         <string>e</string>
                         <freat>1</freat>
-                        <function>b2</function>
+                        <function>b9</function>
                         <fingering>1s</fingering>
                         <barrel>False</barrel>
-                        <visual>2</visual>
+                        <visual>0</visual>
                     </finger>
-
                     <finger>
                         <pitch>G</pitch>
                         <string>e</string>
                         <freat>3</freat>
-                        <function>#2</function>
+                        <function>#9</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5766,14 +5753,545 @@
                         <pitch>A</pitch>
                         <string>e</string>
                         <freat>5</freat>
-                        <function>4</function>
+                        <function>2</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
                     </finger>
                 </fingers>
             </shape>
-            <shape id="x2">
+            <shape id="type1a">
+                <type>arpeggio</type>
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>E</string>
+                        <freat>8</freat>
+                        <function>b13</function>
+                        <fingering>1s</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>E</string>
+                        <freat>10</freat>
+                        <function>b7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>E</string>
+                        <freat>12</freat>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>A</string>
+                        <freat>8</freat>
+                        <function>b9</function>
+                        <fingering>1s</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <freat>10</freat>
+                        <function>#9</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G#</pitch>
+                        <string>A</string>
+                        <freat>11</freat>
+                        <function>3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    
+                    <finger>
+                        <pitch>A</pitch>
+                        <string>A</string>
+                        <freat>12</freat>
+                        <function>4</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>D</string>
+                        <freat>9</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <freat>10</freat>
+                        <function>b13</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>D</string>
+                        <freat>12</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>G</string>
+                        <freat>9</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>G</string>
+                        <freat>10</freat>
+                        <function>b9</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>G</string>
+                        <freat>12</freat>
+                        <function>#9</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G#</pitch>
+                        <string>B</string>
+                        <freat>9</freat>
+                        <function>3</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>A</pitch>
+                        <string>B</string>
+                        <freat>10</freat>
+                        <function>4</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>B</string>
+                        <freat>12</freat>
+                        <function>5</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>e</string>
+                        <freat>8</freat>
+                        <function>b13</function>
+                        <fingering>1s</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>e</string>
+                        <freat>10</freat>
+                        <function>b7</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>e</string>
+                        <freat>12</freat>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="type2">
+                <type>arpeggio</type>
+                <fingers>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>E</string>
+                        <freat>7</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>E</string>
+                        <freat>8</freat>
+                        <function>b13</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>E</string>
+                        <freat>10</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>A</string>
+                        <freat>7</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>A</string>
+                        <freat>8</freat>
+                        <function>b9</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <freat>10</freat>
+                        <function>#9</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>D</string>
+                        <freat>6</freat>
+                        <function>3</function>
+                        <fingering>1s</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    
+                    <finger>
+                        <pitch>A</pitch>
+                        <string>D</string>
+                        <freat>7</freat>
+                        <function>4</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>D</string>
+                        <freat>9</freat>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <freat>10</freat>
+                        <function>b13</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>G</string>
+                        <freat>7</freat>
+                        <function>b7</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>G</string>
+                        <freat>9</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>G</string>
+                        <freat>10</freat>
+                        <function>b9</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>B</string>
+                        <freat>8</freat>
+                        <function>#9</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G#</pitch>
+                        <string>B</string>
+                        <freat>9</freat>
+                        <function>3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>A</pitch>
+                        <string>B</string>
+                        <freat>10</freat>
+                        <function>4</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>e</string>
+                        <freat>7</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>e</string>
+                        <freat>8</freat>
+                        <function>b13</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>e</string>
+                        <freat>10</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="type3">
+                <type>arpeggio</type>
+                <fingers>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>E</string>
+                        <freat>12</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>E</string>
+                        <freat>13</freat>
+                        <function>b9</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>E</string>
+                        <freat>15</freat>
+                        <function>#9</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G#</pitch>
+                        <string>A</string>
+                        <freat>11</freat>
+                        <function>3</function>
+                        <fingering>1s</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>A</pitch>
+                        <string>A</string>
+                        <freat>12</freat>
+                        <function>4</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>A</string>
+                        <freat>14</freat>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <freat>15</freat>
+                        <function>b13</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>D</string>
+                        <freat>12</freat>
+                        <function>b7</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>D</string>
+                        <freat>14</freat>
+                        <function>1</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>D</string>
+                        <freat>15</freat>
+                        <function>b9</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>G</string>
+                        <freat>12</freat>
+                        <function>#9</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    
+                    <finger>
+                        <pitch>G#</pitch>
+                        <string>G</string>
+                        <freat>13</freat>
+                        <function>3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>A</pitch>
+                        <string>G</string>
+                        <freat>14</freat>
+                        <function>4</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>B</pitch>
+                        <string>B</string>
+                        <freat>12</freat>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>B</string>
+                        <freat>13</freat>
+                        <function>b13</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>D</pitch>
+                        <string>B</string>
+                        <freat>15</freat>
+                        <function>b7</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>e</string>
+                        <freat>12</freat>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>F</pitch>
+                        <string>e</string>
+                        <freat>13</freat>
+                        <function>b9</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>e</string>
+                        <freat>15</freat>
+                        <function>#9</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="type4">
                 <type>arpeggio</type>
                 <fingers>
                     <finger>
@@ -5798,7 +6316,7 @@
                         <pitch>C</pitch>
                         <string>E</string>
                         <freat>8</freat>
-                        <function>b6</function>
+                        <function>b13</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5825,7 +6343,7 @@
                         <pitch>F</pitch>
                         <string>A</string>
                         <freat>8</freat>
-                        <function>b2</function>
+                        <function>b9</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5834,7 +6352,7 @@
                         <pitch>G</pitch>
                         <string>D</string>
                         <freat>5</freat>
-                        <function>#2</function>
+                        <function>#9</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5864,22 +6382,13 @@
                         <function>5</function>
                         <fingering>4s</fingering>
                         <barrel>False</barrel>
-                        <visual>1</visual>
-                    </finger>
-                   <finger>
-                        <pitch>B</pitch>
-                        <string>G</string>
-                        <freat>4</freat>
-                        <function>5</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>2</visual>
+                        <visual>0</visual>
                     </finger>
                     <finger>
                         <pitch>C</pitch>
                         <string>G</string>
                         <freat>5</freat>
-                        <function>b6</function>
+                        <function>b13</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5906,7 +6415,7 @@
                         <pitch>F</pitch>
                         <string>B</string>
                         <freat>6</freat>
-                        <function>b2</function>
+                        <function>b9</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
@@ -5915,19 +6424,10 @@
                         <pitch>G</pitch>
                         <string>B</string>
                         <freat>8</freat>
-                        <function>#2</function>
+                        <function>#9</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>B</string>
-                        <freat>9</freat>
-                        <function>3</function>
-                        <fingering>4s</fingering>
-                        <barrel>False</barrel>
-                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>G#</pitch>
@@ -5936,7 +6436,7 @@
                         <function>3</function>
                         <fingering>1s</fingering>
                         <barrel>False</barrel>
-                        <visual>2</visual>
+                        <visual>0</visual>
                     </finger>
                     <finger>
                         <pitch>A</pitch>
@@ -5960,562 +6460,7 @@
                         <pitch>C</pitch>
                         <string>e</string>
                         <freat>8</freat>
-                        <function>b6</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                </fingers>
-            </shape>
-            <shape id="x3">
-                <type>arpeggio</type>
-                <fingers>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>E</string>
-                        <freat>8</freat>
-                        <function>b6</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>E</string>
-                        <freat>10</freat>
-                        <function>b7</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>E</string>
-                        <freat>12</freat>
-                        <function>1</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>A</string>
-                        <freat>8</freat>
-                        <function>b2</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>A</string>
-                        <freat>10</freat>
-                        <function>#2</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>A</string>
-                        <freat>11</freat>
-                        <function>3</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>A</pitch>
-                        <string>A</string>
-                        <freat>12</freat>
-                        <function>4</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>B</pitch>
-                        <string>D</string>
-                        <freat>9</freat>
-                        <function>5</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>D</string>
-                        <freat>10</freat>
-                        <function>b6</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>D</string>
-                        <freat>12</freat>
-                        <function>b7</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>G</string>
-                        <freat>9</freat>
-                        <function>1</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>G</string>
-                        <freat>10</freat>
-                        <function>b2</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>G</string>
-                        <freat>12</freat>
-                        <function>#2</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>B</string>
-                        <freat>9</freat>
-                        <function>3</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>A</pitch>
-                        <string>B</string>
-                        <freat>10</freat>
-                        <function>4</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>B</pitch>
-                        <string>B</string>
-                        <freat>12</freat>
-                        <function>5</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>e</string>
-                        <freat>8</freat>
-                        <function>b6</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>e</string>
-                        <freat>10</freat>
-                        <function>b7</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>e</string>
-                        <freat>12</freat>
-                        <function>1</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                </fingers>
-            </shape>
-            <shape id="x4">
-                <type>arpeggio</type>
-                <fingers>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>E</string>
-                        <freat>10</freat>
-                        <function>b7</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>E</string>
-                        <freat>12</freat>
-                        <function>1</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>E</string>
-                        <freat>13</freat>
-                        <function>b2</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>A</string>
-                        <freat>10</freat>
-                        <function>#2</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>A</string>
-                        <freat>11</freat>
-                        <function>3</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>A</pitch>
-                        <string>A</string>
-                        <freat>12</freat>
-                        <function>4</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>B</pitch>
-                        <string>A</string>
-                        <freat>14</freat>
-                        <function>5</function>
-                        <fingering>4s</fingering>
-                        <barrel>False</barrel>
-                        <visual>1</visual>
-                    </finger>
-                       <finger>
-                        <pitch>B</pitch>
-                        <string>D</string>
-                        <freat>9</freat>
-                        <function>5</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>2</visual>
-                    </finger>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>D</string>
-                        <freat>10</freat>
-                        <function>b6</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>D</string>
-                        <freat>12</freat>
-                        <function>b7</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>D</string>
-                        <freat>14</freat>
-                        <function>1</function>
-                        <fingering>4s</fingering>
-                        <barrel>False</barrel>
-                        <visual>1</visual>
-                    </finger>
-                       <finger>
-                        <pitch>E</pitch>
-                        <string>G</string>
-                        <freat>9</freat>
-                        <function>1</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>2</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>G</string>
-                        <freat>10</freat>
-                        <function>b2</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>G</string>
-                        <freat>12</freat>
-                        <function>#2</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>G</string>
-                        <freat>13</freat>
-                        <function>3</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>A</pitch>
-                        <string>B</string>
-                        <freat>10</freat>
-                        <function>4</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>B</pitch>
-                        <string>B</string>
-                        <freat>12</freat>
-                        <function>5</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>B</string>
-                        <freat>13</freat>
-                        <function>b6</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>e</string>
-                        <freat>10</freat>
-                        <function>b7</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>e</string>
-                        <freat>12</freat>
-                        <function>1</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>e</string>
-                        <freat>13</freat>
-                        <function>b2</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                </fingers>
-            </shape>
-            <shape id="x5">
-                <type>arpeggio</type>
-                <fingers>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>E</string>
-                        <freat>12</freat>
-                        <function>1</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>E</string>
-                        <freat>13</freat>
-                        <function>b2</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>E</string>
-                        <freat>15</freat>
-                        <function>#2</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>E</string>
-                        <freat>16</freat>
-                        <function>3</function>
-                        <fingering>4s</fingering>
-                        <barrel>False</barrel>
-                        <visual>1</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>A</string>
-                        <freat>11</freat>
-                        <function>3</function>
-                        <fingering>1s</fingering>
-                        <barrel>False</barrel>
-                        <visual>2</visual>
-                    </finger>
-                    <finger>
-                        <pitch>A</pitch>
-                        <string>A</string>
-                        <freat>12</freat>
-                        <function>4</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>B</pitch>
-                        <string>A</string>
-                        <freat>14</freat>
-                        <function>5</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>A</string>
-                        <freat>15</freat>
-                        <function>b6</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>D</string>
-                        <freat>12</freat>
-                        <function>b7</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>D</string>
-                        <freat>14</freat>
-                        <function>1</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>D</string>
-                        <freat>15</freat>
-                        <function>b2</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>G</string>
-                        <freat>12</freat>
-                        <function>#2</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G#</pitch>
-                        <string>G</string>
-                        <freat>13</freat>
-                        <function>3</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>A</pitch>
-                        <string>G</string>
-                        <freat>14</freat>
-                        <function>4</function>
-                        <fingering>3</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>B</pitch>
-                        <string>B</string>
-                        <freat>12</freat>
-                        <function>5</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>C</pitch>
-                        <string>B</string>
-                        <freat>13</freat>
-                        <function>b6</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>D</pitch>
-                        <string>B</string>
-                        <freat>15</freat>
-                        <function>b7</function>
-                        <fingering>4</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>E</pitch>
-                        <string>e</string>
-                        <freat>12</freat>
-                        <function>1</function>
-                        <fingering>1</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>F</pitch>
-                        <string>e</string>
-                        <freat>13</freat>
-                        <function>b2</function>
-                        <fingering>2</fingering>
-                        <barrel>False</barrel>
-                        <visual>0</visual>
-                    </finger>
-                    <finger>
-                        <pitch>G</pitch>
-                        <string>e</string>
-                        <freat>15</freat>
-                        <function>#2</function>
+                        <function>b13</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>

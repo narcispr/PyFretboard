@@ -58,7 +58,8 @@ class Shape:
         for f in self.fingers:
             f.pitch = Shape.__transpose_pitch__(f.pitch, interval)
             f.semitone = Finger.NOTES[f.pitch]
-
+            f.octave = f.__finger_to_octave__()
+            
     def to_xml(self):
         return "   <shape>\n    <type>{}</type>\n    <fingers>\n{}\n    </fingers>\n   </shape>".format(PyFreatboard.SHAPE_TYPE_INV[self.type], '\n'.join([f.to_xml() for f in self.fingers]))
     

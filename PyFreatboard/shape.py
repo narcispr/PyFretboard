@@ -1,17 +1,17 @@
 import copy
 from PyFreatboard.finger import Finger
-
+from PyFreatboard.definitions import PyFreatboard
 
 class Shape:
     
     # TODO: Move all definitions to definitions file!
-    SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
-    SHAPE_TYPE_INV = ['arpeggio', 'strum']
+    # SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
+    # SHAPE_TYPE_INV = ['arpeggio', 'strum']
     
     # TODO: Missing several augmented and diminished
     # INTERVAL = {'2m': (1, 1), '2M': (1, 2), '3m': (2, 3), '3M': (2, 4), '4dism': (3, 4), '4': (3, 5), '4aug': (3, 6), '5dism': (4, 6), '5': (4, 7), '5aug': (4, 8), '6m': (5, 8), '6M': (5, 9), '7m': (6, 10), '7M': (6, 11)} # 'Interval name': (notes, semitones)
    
-    def __init__(self, fingers, shape_type=SHAPE_TYPE['ARPEGGIO']):
+    def __init__(self, fingers, shape_type=PyFreatboard.SHAPE_TYPE['ARPEGGIO']):
         self.fingers = fingers
         self.valid = True
         self.type = shape_type
@@ -60,7 +60,7 @@ class Shape:
             f.semitone = Finger.NOTES[f.pitch]
 
     def to_xml(self):
-        return "   <shape>\n    <type>{}</type>\n    <fingers>\n{}\n    </fingers>\n   </shape>".format(Shape.SHAPE_TYPE_INV[self.type], '\n'.join([f.to_xml() for f in self.fingers]))
+        return "   <shape>\n    <type>{}</type>\n    <fingers>\n{}\n    </fingers>\n   </shape>".format(PyFreatboard.SHAPE_TYPE_INV[self.type], '\n'.join([f.to_xml() for f in self.fingers]))
     
     @staticmethod
     def get_interval(pitch1, pitch2):

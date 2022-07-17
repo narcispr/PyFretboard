@@ -6,6 +6,8 @@ class PyFreatboard:
     TEXT_FUNCTION = 1
     TEXT_FINGER = 2
     TEXT_PITCH = 3
-
+    SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
+    SHAPE_TYPE_INV = ['arpeggio', 'strum']
+    
     def __init__(self):
         pass

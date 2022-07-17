@@ -2,6 +2,7 @@ from xml.dom.minidom import parse
 from PyFreatboard.section import Section, Scale, Chord, Note
 from PyFreatboard.finger import Finger
 from PyFreatboard.shape import Shape
+from PyFreatboard.definitions import PyFreatboard as PF
 
 def parse_song_xml(xml_file_path):
     """Parse XML file into Song Object"""
@@ -104,7 +105,7 @@ def __get_chords__(chord):
 def __get_shapes__(shapes):
     sh = {}
     for shape in shapes:
-        shape_type = "ARPEGGIO"
+        shape_type = PF.SHAPE_TYPE["ARPEGGIO"]
         try:
             shape_type = (shape.getElementsByTagName("type")[0].firstChild.data).upper()
         except:

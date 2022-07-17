@@ -18,9 +18,15 @@ class Finger:
             self.pitch = self.__finger_to_pitch__()
         else:
             self.pitch = pitch
+        self.octave = self.__finger_to_octave__()
+        
         
     def __finger_to_pitch__(self):
         return Finger.SEMITONE_TO_PITCH[(Finger.strings_semitones[Finger.guitar_strings.index(self.string)] + self.freat + 4) % 12]
+    
+    def __finger_to_octave__(self):
+        return (Finger.strings_semitones[Finger.guitar_strings.index(self.string)] + self.freat + 4) // 12
+        
 
     def dist(self, f):
         s_num = Finger.guitar_strings.index(self.string)

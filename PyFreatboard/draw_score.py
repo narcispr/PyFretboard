@@ -17,7 +17,7 @@ class DrawScore:
 
     def draw(self, shape, text=PF.TEXT_FUNCTION, fingering=False, shape_name=None, return_fig=False):
         fig, ax = plt.subplots(dpi=100)
-        
+        alterations={'C': False, 'D': False, 'E': False, 'F': False, 'G': False, 'A': False, 'B': False}
         factor = self.__create_score__(ax, len(shape.fingers))
 
         for i, f in enumerate(shape.fingers):
@@ -32,7 +32,7 @@ class DrawScore:
             sup_text = ""
             if fingering and position_mult == 1:
                 sup_text = f.finger
-            self.__draw_note__(ax, f.pitch, f.octave-1, i*position_mult, factor, sub_text, sup_text)
+            self.__draw_note__(ax, f.pitch, f.octave-1, i*position_mult, alterations, factor, sub_text, sup_text)
         if return_fig:
             return fig
         else:
@@ -48,8 +48,8 @@ class DrawScore:
         ax.text(10, 0, 'G', fontsize=50*factor, fontname='Musisync')
         return  factor # factor to scale font size
 
-    def __draw_note__(self, ax, note, octave, position, factor=1, sub_text="", super_text=""):
-
+    def __draw_note__(self, ax, note, octave, position, alterations, factor=1, sub_text="", super_text=""):
+        bool_alteration = False
         pitch = {'C': -14, 'D': -9, 'E': -4, 'F': 1, 'G': 6, 'A': 11, 'B': 16}
         text = "w"
         x = 60 + position * 30
@@ -57,14 +57,24 @@ class DrawScore:
             x -= 9
             if note[1] == 'b':
                 text = "bw"
+                alterations[note[0]] = True
+                bool_alteration = True
             elif note[1] == '#':
+                alterations[note[0]] = True
                 text = "Bw"
+                bool_alteration = True
+        elif alterations[note[0]]:
+            x -= 9
+            text = "½w"
+            alterations[note[0]] = False
+            bool_alteration = True
+
         y = pitch[note[0]] + octave*35
         
         # If dditional lines below first one are required
         if y <= -14:
             x_bar = x
-            if len(note) > 1:
+            if bool_alteration:
                 x_bar += 10
             
             for i in range(-14, y-1, -10):
@@ -73,7 +83,7 @@ class DrawScore:
         # If dditional lines over last one are required
         if y >= 46:
             x_bar = x
-            if len(note) > 1:
+            if bool_alteration:
                 x_bar += 10
             for i in range(46, y+1, 10):
                 ax.plot([x_bar-2, x_bar+15], [i+3.5, i+3.5], 'k')
@@ -89,7 +99,7 @@ class DrawScore:
             y_super_text = y+20
         
         x_text = x
-        if len(note) > 1:
+        if bool_alteration:
             x_text += 10
     
         ax.text(x_text, y_sub_text, sub_text, fontsize=10*factor, fontname='DejaVu Sans')

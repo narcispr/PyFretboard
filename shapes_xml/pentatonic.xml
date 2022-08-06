@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <song xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="song_xml.xsd">
-    <title>Triad shapes</title>
+    <title>Pentatonic shapes</title>
     <author>Narcís Palomeras</author>
     <time>
         <beats>4</beats>
@@ -40,6 +40,15 @@
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <freat>6</freat>
+                        <function>5b</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -85,6 +94,16 @@
                         <fingering>3</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>G</string>
+                        <freat>8</freat>
+                        <function>5b</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -147,6 +166,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>E</string>
+                        <freat>11</freat>
+                        <function>b5</function>
+                        <fingering>4s</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>A</string>
                         <freat>7</freat>
@@ -190,6 +218,15 @@
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>G</string>
+                        <freat>8</freat>
+                        <function>5b</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -252,6 +289,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>E</string>
+                        <freat>11</freat>
+                        <function>b5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>E</string>
                         <freat>12</freat>
@@ -297,6 +343,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <freat>13</freat>
+                        <function>b5</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>G</string>
                         <freat>9</freat>
@@ -340,6 +395,15 @@
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>e</string>
+                        <freat>11</freat>
+                        <function>b5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -402,6 +466,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <freat>13</freat>
+                        <function>b5</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>D</string>
                         <freat>14</freat>
@@ -445,6 +518,15 @@
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>B</string>
+                        <freat>16</freat>
+                        <function>b5</function>
+                        <fingering>4s</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -507,6 +589,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <freat>6</freat>
+                        <function>b5</function>
+                        <fingering>4s</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>D</string>
                         <freat>2</freat>
@@ -550,6 +641,15 @@
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>B</string>
+                        <freat>4</freat>
+                        <function>b5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -618,6 +718,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <freat>6</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>A</string>
                         <freat>7</freat>
@@ -661,6 +770,15 @@
                         <fingering>3</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>G</string>
+                        <freat>8</freat>
+                        <function>b3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -723,6 +841,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>E</string>
+                        <freat>11</freat>
+                        <function>b3</function>
+                        <fingering>4s</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>A</string>
                         <freat>7</freat>
@@ -766,6 +893,15 @@
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>G</string>
+                        <freat>8</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -828,6 +964,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>E</string>
+                        <freat>11</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>E</string>
                         <freat>12</freat>
@@ -873,6 +1018,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <freat>13</freat>
+                        <function>b3</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>G</string>
                         <freat>9</freat>
@@ -916,6 +1070,16 @@
                         <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>e</string>
+                        <freat>11</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -977,6 +1141,16 @@
                         <barrel>False</barrel>
                         <visual>0</visual>
                     </finger>
+                    
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <freat>13</freat>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
                     <finger>
                         <pitch>E</pitch>
                         <string>D</string>
@@ -1021,6 +1195,15 @@
                         <fingering>4</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>B</string>
+                        <freat>16</freat>
+                        <function>b3</function>
+                        <fingering>4s</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>
@@ -1084,6 +1267,15 @@
                         <visual>0</visual>
                     </finger>
                     <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <freat>6</freat>
+                        <function>b3</function>
+                        <fingering>4s</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
+                    </finger>
+                    <finger>
                         <pitch>E</pitch>
                         <string>D</string>
                         <freat>2</freat>
@@ -1127,6 +1319,15 @@
                         <fingering>2</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>B</string>
+                        <freat>4</freat>
+                        <function>b3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>1</visual>
                     </finger>
                     <finger>
                         <pitch>E</pitch>

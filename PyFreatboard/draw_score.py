@@ -77,7 +77,7 @@ class DrawScore:
                 bool_alteration = True
         elif alterations[note[0]]:
             if not offset:
-                x -= 12
+                x -= 11
             text = "½w"
             alterations[note[0]] = False
             bool_alteration = True
@@ -99,8 +99,8 @@ class DrawScore:
             x_bar = x
             if bool_alteration:
                 x_bar += 10
-            for i in range(46, y+1, 10):
-                ax.plot([x_bar-2, x_bar+18], [i+3.5, i+3.5], 'k')
+            for i in range(46, y-1, 10):
+                ax.plot([x_bar-2, x_bar+18], [i+4, i+4], 'k')
 
         ax.text(x, y, text, fontsize=30*factor, fontname='Musisync')
         

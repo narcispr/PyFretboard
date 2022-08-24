@@ -34,7 +34,7 @@ class DrawShape:
             axes.add_artist(circle)
             if show_extension:
                 if f.finger in ['1s', '4s']:
-                    circle = plt.Circle((x, y), self.dot_size+0.5, color='r', fill=False, zorder=2)
+                    circle = plt.Circle((x, y), self.dot_size+0.75, color='r', fill=False, zorder=2)
                 axes.add_artist(circle)
             self.__add_finger_text__(axes, shape, x, y, f)
         if return_fig:

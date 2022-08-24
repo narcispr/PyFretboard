@@ -1,8 +1,8 @@
-from tkinter.font import Font
-from matplotlib import pyplot as plt, patches
+# from tkinter.font import Font
+from matplotlib import pyplot as plt
 from matplotlib import font_manager
 from PyFreatboard.definitions import PyFreatboard as PF
-import time
+import math
 
 class DrawScore:
     def __init__(self):
@@ -15,20 +15,22 @@ class DrawScore:
 
         
 
-    def draw(self, shape, text=PF.TEXT_FUNCTION, fingering=False, shape_name=None, return_fig=False):
+    def draw(self, shape, text=PF.TEXT_FUNCTION, fingering=False, shape_name=None, return_fig=False, tab=False):
         fig, ax = plt.subplots(dpi=100)
         alterations={'C': False, 'D': False, 'E': False, 'F': False, 'G': False, 'A': False, 'B': False}
         last_pitch = (-1, -1)
         # TODO: FIx that!!
         position_mult = 0
+        length = len(shape.fingers)
         if shape.type == PF.SHAPE_TYPE['ARPEGGIO'] or shape.type == 'ARPEGGIO':
             position_mult = 1
+        else:
+            length = 3
 
-        factor = self.__create_score__(ax, len(shape.fingers), position_mult)
+        factor = self.__create_score__(ax, length, position_mult, tab)
        
         for i, f in enumerate(shape.fingers):
             
-
             sub_text = ""
             if text == PF.TEXT_FUNCTION and position_mult == 1:
                 sub_text = f.function
@@ -39,8 +41,14 @@ class DrawScore:
             if position_mult == 0 and last_pitch[1] >= 0:
                 if self.__close_pitch__(last_pitch, (f.pitch, f.octave)):
                     offset = True
-            self.__draw_note__(ax, f.pitch, f.octave-1, i*position_mult, alterations, factor, sub_text, sup_text, offset)
+            x = self.__draw_note__(ax, f.pitch, f.octave-1, i*position_mult, alterations, factor, sub_text, sup_text, offset)
             last_pitch = (f.pitch, f.octave)
+
+            if tab:
+                y = PF.STRING_TO_TAB[f.string] - 5
+                ax.text(x, y, f.freat, fontsize=(8*factor+position_mult), fontname='DejaVu Sans', weight='bold')
+
+
 
         l = len(shape.fingers)*30 + 27 + 30*position_mult
         ax.plot([l]*2, [0, 40], 'k', )
@@ -49,6 +57,14 @@ class DrawScore:
         ax.plot([l+3.5]*2, [0, 40], 'k', linewidth=1)
         ax.plot([l+3.75]*2, [0, 40], 'k', linewidth=1)
         ax.plot([l+4]*2, [0, 40], 'k', linewidth=1)
+
+        if tab:
+            ax.plot([l]*2, [-110, -60], 'k', )
+            ax.plot([l+3]*2, [-110, -60], 'k', linewidth=1)
+            ax.plot([l+3.25]*2, [-110, -60], 'k', linewidth=1)
+            ax.plot([l+3.5]*2, [-110, -60], 'k', linewidth=1)
+            ax.plot([l+3.75]*2, [-110, -60], 'k', linewidth=1)
+            ax.plot([l+4]*2, [-110, -60], 'k', linewidth=1)
         
 
         if return_fig:
@@ -61,14 +77,28 @@ class DrawScore:
         semitones2 = PF.NOTES[pitch2[0]] + 12*pitch2[1]
         return abs(semitones1 - semitones2) < 3
         
-    def __create_score__(self, ax, length=11, mult=1):
+    def __create_score__(self, ax, length=11, mult=1, tab=False):
         for i in range(5):
-            ax.plot([0, 30+length*30+30*mult], [i*10, i*10], 'k')
+            ax.plot([0, 60+length*30], [i*10, i*10], 'k')
 
-        factor = 400/(10+length*30)
+        ax.plot([0, 10], [80, 80], 'w')
+
+        factor = 100/(math.sqrt(length+1)*30)
+        if not tab and length < 5: 
+            factor *= 2
+        
         ax.axis('equal')
         ax.axis('off')
         ax.text(10, 0, 'G', fontsize=50*factor, fontname='Musisync')
+
+        if tab:
+            for i in range(6):
+                ax.plot([0, 60+length*30], [i*10-110, i*10-110], 'k')
+            ax.plot([0, 0], [-110, 40], 'k')
+            ax.text(10, -75, 'T', fontsize=12*factor, fontname='DejaVu Sans', weight='bold')
+            ax.text(10, -90, 'A', fontsize=12*factor, fontname='DejaVu Sans', weight='bold')
+            ax.text(10, -105, 'B', fontsize=12*factor, fontname='DejaVu Sans', weight='bold')
+            
         return  factor # factor to scale font size
 
     def __draw_note__(self, ax, note, octave, position, alterations, factor=1, sub_text="", super_text="", offset=False):
@@ -130,3 +160,4 @@ class DrawScore:
     
         ax.text(x_text, y_sub_text, sub_text, fontsize=10*factor, fontname='DejaVu Sans')
         ax.text(x_text, y_super_text, super_text, fontsize=10*factor, fontname='DejaVu Sans')
+        return 60 + position * 30

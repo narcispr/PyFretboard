@@ -9,6 +9,6 @@ class PyFreatboard:
     TEXT_PITCH = 3
     SHAPE_TYPE = {'ARPEGGIO': 0, 'STRUM': 1}
     SHAPE_TYPE_INV = ['arpeggio', 'strum']
-    
+    STRING_TO_TAB={'E':-110, 'A': -100, 'D': -90, 'G': -80, 'B':-70, 'e': -60}
     def __init__(self):
         pass

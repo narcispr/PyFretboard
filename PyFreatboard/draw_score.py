@@ -18,13 +18,16 @@ class DrawScore:
     def draw(self, shape, text=PF.TEXT_FUNCTION, fingering=False, shape_name=None, return_fig=False):
         fig, ax = plt.subplots(dpi=100)
         alterations={'C': False, 'D': False, 'E': False, 'F': False, 'G': False, 'A': False, 'B': False}
-        factor = self.__create_score__(ax, len(shape.fingers))
         last_pitch = (-1, -1)
+        # TODO: FIx that!!
+        position_mult = 0
+        if shape.type == PF.SHAPE_TYPE['ARPEGGIO'] or shape.type == 'ARPEGGIO':
+            position_mult = 1
+
+        factor = self.__create_score__(ax, len(shape.fingers), position_mult)
+       
         for i, f in enumerate(shape.fingers):
-            position_mult = 0
-            # TODO: FIx that!!
-            if shape.type == PF.SHAPE_TYPE['ARPEGGIO'] or shape.type == 'ARPEGGIO':
-                position_mult = 1
+            
 
             sub_text = ""
             if text == PF.TEXT_FUNCTION and position_mult == 1:
@@ -39,6 +42,15 @@ class DrawScore:
             self.__draw_note__(ax, f.pitch, f.octave-1, i*position_mult, alterations, factor, sub_text, sup_text, offset)
             last_pitch = (f.pitch, f.octave)
 
+        l = len(shape.fingers)*30 + 27 + 30*position_mult
+        ax.plot([l]*2, [0, 40], 'k', )
+        ax.plot([l+3]*2, [0, 40], 'k', linewidth=1)
+        ax.plot([l+3.25]*2, [0, 40], 'k', linewidth=1)
+        ax.plot([l+3.5]*2, [0, 40], 'k', linewidth=1)
+        ax.plot([l+3.75]*2, [0, 40], 'k', linewidth=1)
+        ax.plot([l+4]*2, [0, 40], 'k', linewidth=1)
+        
+
         if return_fig:
             return fig
         else:
@@ -49,11 +61,11 @@ class DrawScore:
         semitones2 = PF.NOTES[pitch2[0]] + 12*pitch2[1]
         return abs(semitones1 - semitones2) < 3
         
-    def __create_score__(self, ax, length=11):
+    def __create_score__(self, ax, length=11, mult=1):
         for i in range(5):
-            ax.plot([0, 60+length*30], [i*10, i*10], 'k')
+            ax.plot([0, 30+length*30+30*mult], [i*10, i*10], 'k')
 
-        factor = 400/(30+length*30)
+        factor = 400/(10+length*30)
         ax.axis('equal')
         ax.axis('off')
         ax.text(10, 0, 'G', fontsize=50*factor, fontname='Musisync')
@@ -95,11 +107,11 @@ class DrawScore:
                 ax.plot([x_bar-2, x_bar+18], [i+3.5, i+3.5], 'k')
         
         # If dditional lines over last one are required
-        if y >= 46:
+        if y >= 45:
             x_bar = x
             if bool_alteration:
                 x_bar += 10
-            for i in range(46, y-1, 10):
+            for i in range(46, y+2, 10):
                 ax.plot([x_bar-2, x_bar+18], [i+4, i+4], 'k')
 
         ax.text(x, y, text, fontsize=30*factor, fontname='Musisync')

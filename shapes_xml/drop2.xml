@@ -178,6 +178,7 @@
             </shape>
             
             <shape id="drop2 set 2 3 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>C</pitch>
@@ -218,6 +219,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 5 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>E</pitch>
@@ -258,6 +260,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 7 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>G</pitch>
@@ -298,6 +301,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 1 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>B</pitch>
@@ -509,6 +513,7 @@
             </shape>
         
             <shape id="drop2 set 2 3 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>C</pitch>
@@ -549,6 +554,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 5 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>E</pitch>
@@ -589,6 +595,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 b7 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>G</pitch>
@@ -629,6 +636,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 1 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>Bb</pitch>
@@ -841,6 +849,7 @@
             </shape>
        
             <shape id="drop2 set 2 3 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>C</pitch>
@@ -881,6 +890,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 5 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>Eb</pitch>
@@ -921,6 +931,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 b7 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>G</pitch>
@@ -961,6 +972,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 1 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>Bb</pitch>
@@ -1173,6 +1185,7 @@
 
        
             <shape id="drop2 set 2 3 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>C</pitch>
@@ -1213,6 +1226,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 5 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>Eb</pitch>
@@ -1253,6 +1267,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 b7 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>Gb</pitch>
@@ -1293,6 +1308,7 @@
                 </fingers>
             </shape>
             <shape id="drop2 set 2 1 top">
+                <type>strum</type>
                 <fingers>
                     <finger>
                         <pitch>Bb</pitch>

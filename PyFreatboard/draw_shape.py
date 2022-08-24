@@ -22,7 +22,7 @@ class DrawShape:
             y = 5*self.string_separation - PF.STRINGS.index(f.string)*self.string_separation
             if f.function == '1':
                 if f.visual == 0:
-                    circle = plt.Circle((x, y), self.dot_size, color='r', fill=True, zorder=2)
+                    circle = plt.Circle((x, y), self.dot_size, color='tomato', fill=True, zorder=2)
                 else:
                     circle = plt.Circle((x, y), self.dot_size, color='pink', fill=True, zorder=2)        
             else:
@@ -34,7 +34,7 @@ class DrawShape:
             axes.add_artist(circle)
             if show_extension:
                 if f.finger in ['1s', '4s']:
-                    circle = plt.Circle((x, y), self.dot_size+0.5, color='blue', fill=False, zorder=2)
+                    circle = plt.Circle((x, y), self.dot_size+0.5, color='r', fill=False, zorder=2)
                 axes.add_artist(circle)
             self.__add_finger_text__(axes, shape, x, y, f)
         if return_fig:
@@ -63,7 +63,7 @@ class DrawShape:
             y = (f.freat - min_f)*self.freat_size + self.freat_size/2
             x = 5*self.string_separation - PF.STRINGS.index(f.string)*self.string_separation
             if f.function == '1':
-                circle = plt.Circle((x, y), self.dot_size*1.2, color='r', fill=True, zorder=2)
+                circle = plt.Circle((x, y), self.dot_size*1.2, color='tomato', fill=True, zorder=2)
             else:
                 circle = plt.Circle((x, y), self.dot_size*1.2, color='k', fill=True, zorder=2)
             axes.add_artist(circle)

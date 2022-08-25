@@ -1,6 +1,6 @@
-from PyFreatboard.song_xml import parse_song_xml
-from PyFreatboard.build_shape import BuildShape
-from PyFreatboard.draw_shape import DrawShape
+from PyFretboard.song_xml import parse_song_xml
+from PyFretboard.build_shape import BuildShape
+from PyFretboard.draw_shape import DrawShape
 from os.path import join
 
 class Song:
@@ -9,28 +9,10 @@ class Song:
     def __init__(self, xml_file_path, autogen_shapes=False):
         """Parse XML song file into Song Object"""
         self.title, self.author, self.sections = parse_song_xml(xml_file_path)
-        if autogen_shapes:
-            self.scale_shapes = Song.__gen_scales__(self.sections)
-            self.arpeggio_shapes = Song.__gen_arpeggios__(self.sections)
-            self.drop2_shapes = Song.__gen_drops2__(self.sections)
-        else:
-            self.scale_shapes = Song.__get_scales__(self.sections)
-            self.chord_shapes = Song.__get_chords__(self.sections)
-            # self.arpeggio_shapes = []
-            # self.drop2_shapes = []
-
-    def get_scale_type_at_root(self, scale_type, root):
-        shapes = []
-        for section in self.sections:
-            for scale in section.scale:
-                if scale.type == scale_type:
-                    for shape_id in scale.shape.keys():
-                        s = scale.shape[shape_id]
-                        interval = s.get_interval(scale.root, root)
-                        s.transpose(interval)
-                        shapes.append(s)
-        return shapes
-
+        self.scale_shapes = Song.__get_scales__(self.sections)
+        # self.arpeggio_shapes = Song.__get_arpeggios__(self.sections)
+        # self.drop2_shapes = Song.__get_drops2__(self.sections)
+    
     def get_scales(self):
         return self.scale_shapes
     
@@ -113,13 +95,13 @@ class Song:
         return shapes 
 
     @staticmethod
-    def draw_shapes(shapes, path='.', init_freat=None, vertical=False):
+    def draw_shapes(shapes, path='.', init_fret=None, vertical=False):
         draw = DrawShape()
         for shape_name, all_shapes in zip(shapes.keys(), shapes.values()):
             for e, shape in enumerate(all_shapes):
                 if shape.valid:
-                    min_freat = shape.get_max_min_freat()[1]
-                    if init_freat is None or min_freat == init_freat or (min_freat + 1) == init_freat:
+                    min_fret = shape.get_max_min_fret()[1]
+                    if init_fret is None or min_fret == init_fret or (min_fret + 1) == init_fret:
                         if vertical:
                             f = draw.draw_vertical(shape, shape_name=shape_name, return_fig=True)
                         else:

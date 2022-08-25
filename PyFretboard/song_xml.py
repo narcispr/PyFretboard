@@ -1,8 +1,8 @@
 from xml.dom.minidom import parse
-from PyFreatboard.section import Section, Scale, Chord, Note
-from PyFreatboard.finger import Finger
-from PyFreatboard.shape import Shape
-from PyFreatboard.definitions import PyFreatboard as PF
+from PyFretboard.section import Section, Scale, Chord, Note
+from PyFretboard.finger import Finger
+from PyFretboard.shape import Shape
+from PyFretboard.definitions import PyFretboard as PF
 
 def parse_song_xml(xml_file_path):
     """Parse XML file into Song Object"""
@@ -125,7 +125,7 @@ def __get_shapes__(shapes):
 def __get_finger__(finger):
     pitch = None
     string = None
-    freat = None
+    fret = None
     function = None
     fingering = ""
     barrel = False
@@ -133,10 +133,10 @@ def __get_finger__(finger):
     try:
         pitch = finger.getElementsByTagName("pitch")[0].firstChild.data
         string = finger.getElementsByTagName("string")[0].firstChild.data
-        freat = int(finger.getElementsByTagName("freat")[0].firstChild.data)
+        fret = int(finger.getElementsByTagName("fret")[0].firstChild.data)
         function = finger.getElementsByTagName("function")[0].firstChild.data
     except:
-        print("No finger pitch, string, freat or function found")
+        print("No finger pitch, string, fret or function found")
     try:
         fingering = finger.getElementsByTagName("fingering")[0].firstChild.data
     except:
@@ -150,7 +150,7 @@ def __get_finger__(finger):
         visual = int(finger.getElementsByTagName("visual")[0].firstChild.data)
     except:
         pass
-    return Finger(function=function, string=string, freat=freat, finger=fingering, pitch=pitch, barrel=barrel, visual=visual)
+    return Finger(function=function, string=string, fret=fret, finger=fingering, pitch=pitch, barrel=barrel, visual=visual)
 
 
 def __get_note__(note):

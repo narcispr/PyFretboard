@@ -34,7 +34,7 @@
                                     <xs:sequence>
                                       <xs:element name="pitch" type="xs:string" />
                                       <xs:element name="string" type="xs:string" />
-                                      <xs:element name="freat" type="xs:string" />
+                                      <xs:element name="fret" type="xs:string" />
                                       <xs:element name="function" type="xs:string" />
                                       <xs:element name="fingering" type="xs:string" />
                                       <xs:element name="barrel" type="xs:string" />

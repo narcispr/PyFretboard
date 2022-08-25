@@ -18,7 +18,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -27,7 +27,7 @@
                     <finger>
                         <pitch>B</pitch>
                         <string>D</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -36,7 +36,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>G</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -45,7 +45,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>B</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>5</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -59,7 +59,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -68,7 +68,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>D</string>
-                        <freat>5</freat>
+                        <fret>5</fret>
                         <function>5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -77,7 +77,7 @@
                     <finger>
                         <pitch>B</pitch>
                         <string>G</string>
-                        <freat>4</freat>
+                        <fret>4</fret>
                         <function>7</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -86,7 +86,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>B</string>
-                        <freat>5</freat>
+                        <fret>5</fret>
                         <function>3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -105,7 +105,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -114,7 +114,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>D</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b7</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -123,7 +123,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>G</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b3</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -132,7 +132,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>B</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>5</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -146,7 +146,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>True</barrel>
@@ -155,7 +155,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>D</string>
-                        <freat>5</freat>
+                        <fret>5</fret>
                         <function>5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -164,7 +164,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>1</fingering>
                         <barrel>True</barrel>
@@ -173,7 +173,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>B</string>
-                        <freat>4</freat>
+                        <fret>4</fret>
                         <function>b3</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -187,7 +187,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -196,7 +196,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>D</string>
-                        <freat>1</freat>
+                        <fret>1</fret>
                         <function>b3</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -205,7 +205,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -214,7 +214,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>B</string>
-                        <freat>4</freat>
+                        <fret>4</fret>
                         <function>b3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -234,7 +234,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -243,7 +243,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>D</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b7</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -252,7 +252,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>G</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -261,7 +261,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>B</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -276,7 +276,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>True</barrel>
@@ -285,7 +285,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>D</string>
-                        <freat>5</freat>
+                        <fret>5</fret>
                         <function>5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -294,7 +294,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>1</fingering>
                         <barrel>True</barrel>
@@ -303,7 +303,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>B</string>
-                        <freat>5</freat>
+                        <fret>5</fret>
                         <function>3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -317,7 +317,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -326,7 +326,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>D</string>
-                        <freat>2</freat>
+                        <fret>2</fret>
                         <function>3</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -335,7 +335,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -344,7 +344,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>B</string>
-                        <freat>1</freat>
+                        <fret>1</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -364,7 +364,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -373,7 +373,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>D</string>
-                        <freat>2</freat>
+                        <fret>2</fret>
                         <function>3</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -382,7 +382,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -391,7 +391,7 @@
                     <finger>
                         <pitch>D</pitch>
                         <string>B</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>9</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -411,7 +411,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -420,7 +420,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>D</string>
-                        <freat>1</freat>
+                        <fret>1</fret>
                         <function>3</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -429,7 +429,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -438,7 +438,7 @@
                     <finger>
                         <pitch>D</pitch>
                         <string>B</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>9</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -458,7 +458,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -467,7 +467,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>D</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b7</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -476,7 +476,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>G</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>3</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -485,7 +485,7 @@
                     <finger>
                         <pitch>Ab</pitch>
                         <string>B</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>b13</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -505,7 +505,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -514,7 +514,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>D</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b7</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -523,7 +523,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>G</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>3</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -532,7 +532,7 @@
                     <finger>
                         <pitch>A</pitch>
                         <string>B</string>
-                        <freat>10</freat>
+                        <fret>10</fret>
                         <function>13</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -552,7 +552,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -561,7 +561,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>D</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b7</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -570,7 +570,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>G</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -579,7 +579,7 @@
                     <finger>
                         <pitch>Gb</pitch>
                         <string>B</string>
-                        <freat>7</freat>
+                        <fret>7</fret>
                         <function>b5</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -593,7 +593,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -602,7 +602,7 @@
                     <finger>
                         <pitch>Gb</pitch>
                         <string>D</string>
-                        <freat>4</freat>
+                        <fret>4</fret>
                         <function>b5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -611,7 +611,7 @@
                     <finger>
                         <pitch>Bb</pitch>
                         <string>G</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>b7</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -620,7 +620,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>B</string>
-                        <freat>4</freat>
+                        <fret>4</fret>
                         <function>b3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -640,7 +640,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -649,7 +649,7 @@
                     <finger>
                         <pitch>A</pitch>
                         <string>D</string>
-                        <freat>7</freat>
+                        <fret>7</fret>
                         <function>6</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -658,7 +658,7 @@
                     <finger>
                         <pitch>E</pitch>
                         <string>G</string>
-                        <freat>9</freat>
+                        <fret>9</fret>
                         <function>3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -667,7 +667,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>B</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -687,7 +687,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>E</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -696,7 +696,7 @@
                     <finger>
                         <pitch>A</pitch>
                         <string>D</string>
-                        <freat>7</freat>
+                        <fret>7</fret>
                         <function>6</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -705,7 +705,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>G</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>b3</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>
@@ -714,7 +714,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>B</string>
-                        <freat>8</freat>
+                        <fret>8</fret>
                         <function>5</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -729,7 +729,7 @@
                     <finger>
                         <pitch>C</pitch>
                         <string>A</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>1</function>
                         <fingering>2</fingering>
                         <barrel>False</barrel>
@@ -738,7 +738,7 @@
                     <finger>
                         <pitch>A</pitch>
                         <string>G</string>
-                        <freat>2</freat>
+                        <fret>2</fret>
                         <function>6</function>
                         <fingering>1</fingering>
                         <barrel>False</barrel>
@@ -747,7 +747,7 @@
                     <finger>
                         <pitch>Eb</pitch>
                         <string>B</string>
-                        <freat>4</freat>
+                        <fret>4</fret>
                         <function>b3</function>
                         <fingering>4</fingering>
                         <barrel>False</barrel>
@@ -756,7 +756,7 @@
                     <finger>
                         <pitch>G</pitch>
                         <string>e</string>
-                        <freat>3</freat>
+                        <fret>3</fret>
                         <function>5</function>
                         <fingering>3</fingering>
                         <barrel>False</barrel>

@@ -7,10 +7,10 @@ class Finger:
     guitar_strings = ['e', 'B', 'G', 'D', 'A', 'E']
     strings_semitones = [24, 19, 15, 10, 5, 0]
 
-    def __init__(self, function, string, freat, finger="", pitch=None, barrel=False, visual=0):
+    def __init__(self, function, string, fret, finger="", pitch=None, barrel=False, visual=0):
         self.function = function
         self.string = string
-        self.freat = freat
+        self.fret = fret
         self.finger = finger
         self.barrel = barrel
         self.visual = visual
@@ -22,22 +22,22 @@ class Finger:
         
         
     def __finger_to_pitch__(self):
-        return Finger.SEMITONE_TO_PITCH[(Finger.strings_semitones[Finger.guitar_strings.index(self.string)] + self.freat + 4) % 12]
+        return Finger.SEMITONE_TO_PITCH[(Finger.strings_semitones[Finger.guitar_strings.index(self.string)] + self.fret + 4) % 12]
     
     def __finger_to_octave__(self):
-        return (Finger.strings_semitones[Finger.guitar_strings.index(self.string)] + self.freat + 4) // 12
+        return (Finger.strings_semitones[Finger.guitar_strings.index(self.string)] + self.fret + 4) // 12
         
 
     def dist(self, f):
         s_num = Finger.guitar_strings.index(self.string)
         f_num = Finger.guitar_strings.index(f.string)
-        return (Finger.strings_semitones[s_num] + self.freat) - (Finger.strings_semitones[f_num] + f.freat)
+        return (Finger.strings_semitones[s_num] + self.fret) - (Finger.strings_semitones[f_num] + f.fret)
     
     def to_xml(self):
-        return "     <finger>\n      <pitch>{}</pitch>\n      <string>{}</string>\n      <freat>{}</freat>\n      <function>{}</function>\n      <fingering>{}</fingering>\n      <barrel>False</barrel>\n      <visual>{}</visual>\n     </finger>".format(self.pitch, self.string, self.freat, self.function, self.finger, self.visual)
+        return "     <finger>\n      <pitch>{}</pitch>\n      <string>{}</string>\n      <fret>{}</fret>\n      <function>{}</function>\n      <fingering>{}</fingering>\n      <barrel>False</barrel>\n      <visual>{}</visual>\n     </finger>".format(self.pitch, self.string, self.fret, self.function, self.finger, self.visual)
         
     def __eq__(self, f):
-        return self.freat == f.freat and self.string == f.string and self.finger == f.finger
+        return self.fret == f.fret and self.string == f.string and self.finger == f.finger
 
     def __str__(self):
-        return "{} ({}) --> [{}/{}]({})".format(self.pitch, self.function, self.string, self.freat, self.finger)
+        return "{} ({}) --> [{}/{}]({})".format(self.pitch, self.function, self.string, self.fret, self.finger)

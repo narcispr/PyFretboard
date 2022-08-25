@@ -1,7 +1,7 @@
 # from tkinter.font import Font
 from matplotlib import pyplot as plt
 from matplotlib import font_manager
-from PyFreatboard.definitions import PyFreatboard as PF
+from PyFretboard.definitions import PyFretboard as PF
 import math
 
 class DrawScore:
@@ -46,7 +46,7 @@ class DrawScore:
 
             if tab:
                 y = PF.STRING_TO_TAB[f.string] - 5
-                ax.text(x, y, f.freat, fontsize=(8*factor+position_mult), fontname='DejaVu Sans', weight='bold')
+                ax.text(x, y, f.fret, fontsize=(8*factor+position_mult), fontname='DejaVu Sans', weight='bold')
 
 
 

@@ -1,5 +1,5 @@
-from PyFreatboard.shape import Shape
-from PyFreatboard.finger import Finger
+from PyFretboard.shape import Shape
+from PyFretboard.finger import Finger
 
 
 class BuildShape:
@@ -41,7 +41,7 @@ class BuildShape:
         self.root = root
         self.shape_type = shape_type
         self.plot_type = plot_type
-        self.all_shapes = self.scale_to_freatboard()
+        self.all_shapes = self.scale_to_fretboard()
 
         # Set fingering for each shape
         shapes_with_fingers = []
@@ -52,7 +52,7 @@ class BuildShape:
         # Filter invalid or redundant shapes
         self.all_shapes = self.filter_shapes(self.all_shapes)
                 
-    def scale_to_freatboard(self):
+    def scale_to_fretboard(self):
         all_shapes = []
         scale, harmony = self.get_shape_notes_and_harmony()
         fingers = self.__semitone_to_finger__(scale, harmony, Finger.guitar_strings)
@@ -60,7 +60,7 @@ class BuildShape:
         for r in fingers:
             if r.string == 'E':
                 shape = Shape([r])
-                self.fill_shape(shape, harmony, (harmony.index(r.function) + 1) % len(harmony), fingers, all_shapes, r.freat, r.freat)
+                self.fill_shape(shape, harmony, (harmony.index(r.function) + 1) % len(harmony), fingers, all_shapes, r.fret, r.fret)
             
         return all_shapes
 
@@ -73,15 +73,15 @@ class BuildShape:
         return shape_notes, harmony
 
 
-    def fill_shape(self, shape, harmony, pointer, fingers, all_shapes, min_freat, max_freat, depth=0):
+    def fill_shape(self, shape, harmony, pointer, fingers, all_shapes, min_fret, max_fret, depth=0):
         valid_fingers = []
         for f in fingers:
-            if f.function == harmony[pointer] and f.dist(shape.fingers[-1]) > 0 and f.dist(shape.fingers[-1]) < 12 and abs(f.freat - shape.fingers[-1].freat) < 5:
+            if f.function == harmony[pointer] and f.dist(shape.fingers[-1]) > 0 and f.dist(shape.fingers[-1]) < 12 and abs(f.fret - shape.fingers[-1].fret) < 5:
                 valid_fingers.append(f)
         if len(valid_fingers) > 0:
             for f in valid_fingers:
-                new_min = min(min_freat, f.freat)
-                new_max = max(max_freat, f.freat)
+                new_min = min(min_fret, f.fret)
+                new_max = max(max_fret, f.fret)
                 if new_max - new_min < 5 and new_min > 0:
                     self.fill_shape(shape + [f], harmony, (pointer + 1)%len(harmony), fingers, all_shapes, new_min, new_max, depth+1)
                 elif shape.fingers[-1].string == 'e':
@@ -95,12 +95,12 @@ class BuildShape:
             semitone = [semitone]
         for n, h in zip(semitone, function):
             for string in guitar_strings:
-                freat = n - Finger.NOTES[string.upper()]
-                if freat < 0:
-                    freat += 12
-                fingers.append(Finger(h, string, freat, None))
-                if freat < 5:
-                    fingers.append(Finger(h, string, freat + 12, None))    
+                fret = n - Finger.NOTES[string.upper()]
+                if fret < 0:
+                    fret += 12
+                fingers.append(Finger(h, string, fret, None))
+                if fret < 5:
+                    fingers.append(Finger(h, string, fret + 12, None))    
         return fingers
 
     def filter_shapes(self, shapes):
@@ -168,7 +168,7 @@ class BuildShape:
             for r in fingers:
                 if r.string == bass_string:
                     shape = Shape([r])
-                    self.fill_shape(shape, drop_h, (drop_h.index(r.function) + 1) % len(drop_h), fingers, all_drops_tmp, r.freat, r.freat)
+                    self.fill_shape(shape, drop_h, (drop_h.index(r.function) + 1) % len(drop_h), fingers, all_drops_tmp, r.fret, r.fret)
                 
             all_drops += all_drops_tmp
 
@@ -187,7 +187,7 @@ class BuildShape:
     def filter_drops(self, drops, length):
         for d in drops:
             if d.valid:
-                max, min = d.get_max_min_freat()
+                max, min = d.get_max_min_fret()
                 if max - min > 3:
                     d.valid = False
                 if min == 0:

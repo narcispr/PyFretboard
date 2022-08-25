@@ -1,4 +1,4 @@
-class PyFreatboard:
+class PyFretboard:
     STRINGS = ['e', 'B', 'G', 'D', 'A', 'E']
     STRINGS_REVERSE = ['E', 'A', 'D', 'G', 'B', 'e']
     NOTE_NAME = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'G#', 'A', 'Bb', 'B']

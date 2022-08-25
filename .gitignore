@@ -1,6 +1,6 @@
 *__pycache__/*
 *.png
-PyFreatboard.egg-info/*
+PyFretboard.egg-info/*
 build/*
 dist/*
 *.pyc

@@ -86,6 +86,9 @@ class DrawScore:
         factor = 100/(math.sqrt(length+1)*30)
         if not tab and length < 5: 
             factor *= 2
+        if length <= 10 and length > 5:
+            print("Arpeggio!")
+            factor *= 1.4
         
         ax.axis('equal')
         ax.axis('off')

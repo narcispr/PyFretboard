@@ -9,7 +9,7 @@ class DrawShape:
         self.string_separation = string_separation
         self.dot_size = 4.4
         self.font_size = 14
-
+        
     def draw(self, shape, text=PF.TEXT_FUNCTION, shape_name=None, init_fret=None, show_string_names=True, return_fig=False, show_extension=True):
         self.text = text
         figure, axes = plt.subplots(dpi=100)
@@ -17,6 +17,7 @@ class DrawShape:
         if init_fret is not None:
             min_f = init_fret    
         self.__draw_fretboard__(axes, max_f - min_f, min_f, shape_name, show_string_names)
+        self.__draw_barrel_scale__(shape, min_f, axes)
         for f in shape.fingers:
             x = (f.fret - min_f)*self.fret_size + self.fret_size/2
             y = 5*self.string_separation - PF.STRINGS.index(f.string)*self.string_separation
@@ -100,11 +101,38 @@ class DrawShape:
                     min_pos[1] = y
                 if y > max_pos[1]:
                     max_pos[1] = y
+                
             circle = plt.Circle(min_pos, self.dot_size*1.4, color='darkgray', fill=True, zorder=2)
             axes.add_artist(circle)
             circle = plt.Circle(max_pos, self.dot_size*1.4, color='darkgray', fill=True, zorder=2)
             axes.add_artist(circle)
             rect = patches.Rectangle((min_pos[0], min_pos[1] - self.dot_size*1.45), max_pos[0]-min_pos[0], self.dot_size*2.8 , color='darkgray', zorder=2)
+            axes.add_patch(rect)
+    
+    def __draw_barrel_scale__(self, shape, min_f, axes):
+        barrel_fingers = []
+        for f in shape.fingers:
+            if f.barrel:
+                barrel_fingers.append(f)
+        min_pos = [999, 999]
+        max_pos = [-999, -999]
+        if len(barrel_fingers) >= 2:
+            for f in barrel_fingers:
+                y = (f.fret - min_f)*self.fret_size + self.fret_size/2
+                x = 5*self.string_separation - PF.STRINGS.index(f.string)*self.string_separation
+                if x < min_pos[0]:
+                    min_pos[0] = x
+                if x > max_pos[0]:
+                    max_pos[0] = x
+                if y < min_pos[1]:
+                    min_pos[1] = y
+                if y > max_pos[1]:
+                    max_pos[1] = y
+            circle = plt.Circle((min_pos[1], min_pos[0]), self.dot_size*1.2, color='lightgray', fill=True, zorder=2)
+            axes.add_artist(circle)
+            circle = plt.Circle((max_pos[1], max_pos[0]), self.dot_size*1.2, color='lightgray', fill=True, zorder=2)
+            axes.add_artist(circle)
+            rect = patches.Rectangle((min_pos[1] - self.dot_size*1.25, min_pos[0]), self.dot_size*2.4, max_pos[0]-min_pos[0], color='lightgray', zorder=2)
             axes.add_patch(rect)
 
     def __draw_fretboard__(self, axes, frets, init_fret, shape_name, show_string_names):

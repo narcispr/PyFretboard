@@ -184,7 +184,7 @@
                         <fret>12</fret>
                         <function>5</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -193,7 +193,7 @@
                         <fret>12</fret>
                         <function>7</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -211,7 +211,7 @@
                         <fret>12</fret>
                         <function>3</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -289,7 +289,7 @@
                         <fret>8</fret>
                         <function>5</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -307,7 +307,7 @@
                         <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -452,7 +452,7 @@
                         <fret>5</fret>
                         <function>1</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -461,7 +461,7 @@
                         <fret>5</fret>
                         <function>3</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -545,7 +545,7 @@
                         <fret>5</fret>
                         <function>1</function>
                         <fingering>3</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -554,7 +554,7 @@
                         <fret>5</fret>
                         <function>3</function>
                         <fingering>3</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -622,7 +622,7 @@
                         <fret>5</fret>
                         <function>1</function>
                         <fingering>4</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -631,7 +631,7 @@
                         <fret>5</fret>
                         <function>3</function>
                         <fingering>4</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -672,7 +672,7 @@
                         <fret>12</fret>
                         <function>5</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -699,7 +699,7 @@
                         <fret>12</fret>
                         <function>3</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -777,7 +777,7 @@
                         <fret>8</fret>
                         <function>5</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -795,7 +795,7 @@
                         <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -940,7 +940,7 @@
                         <fret>5</fret>
                         <function>1</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -949,7 +949,7 @@
                         <fret>5</fret>
                         <function>3</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -982,6 +982,7 @@
                 </fingers>
             </shape>
         </scale>
+
 
        <scale>
             <root>C</root>
@@ -1264,7 +1265,7 @@
                         <fret>8</fret>
                         <function>b3</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1273,7 +1274,7 @@
                         <fret>8</fret>
                         <function>5</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1291,7 +1292,7 @@
                         <fret>8</fret>
                         <function>1</function>
                         <fingering>1</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1359,7 +1360,7 @@
                         <fret>8</fret>
                         <function>b3</function>
                         <fingering>2</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1368,7 +1369,7 @@
                         <fret>8</fret>
                         <function>5</function>
                         <fingering>2</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1445,7 +1446,7 @@
                         <fret>8</fret>
                         <function>b3</function>
                         <fingering>4</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1454,7 +1455,7 @@
                         <fret>8</fret>
                         <function>5</function>
                         <fingering>4</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1769,7 +1770,7 @@
                         <fret>11</fret>
                         <function>b5</function>
                         <fingering>4</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1778,7 +1779,7 @@
                         <fret>11</fret>
                         <function>b7</function>
                         <fingering>4</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1837,7 +1838,7 @@
                         <fret>8</fret>
                         <function>b7</function>
                         <fingering>2</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>
@@ -1855,7 +1856,7 @@
                         <fret>8</fret>
                         <function>b3</function>
                         <fingering>2</fingering>
-                        <barrel>False</barrel>
+                        <barrel>True</barrel>
                         <visual>0</visual>
                     </finger>
                     <finger>

@@ -8,7 +8,7 @@
         <beat-type>4</beat-type>
     </time>
     <section id="chords">
-        <chord>
+        <scale>
             <root>C</root>
             <type>Maj7</type>
             <duration>4</duration>
@@ -478,7 +478,7 @@
                     </finger>
                 </fingers>
             </shape>
-        </chord>
+        </scale>
 
         <chord>
             <root>G</root>

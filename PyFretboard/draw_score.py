@@ -25,7 +25,7 @@ class DrawScore:
         if shape.type == PF.SHAPE_TYPE['ARPEGGIO'] or shape.type == 'ARPEGGIO':
             position_mult = 1
         else:
-            length = 3
+            length = 2
 
         factor = self.__create_score__(ax, length, position_mult, tab)
        

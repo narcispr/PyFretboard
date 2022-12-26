@@ -1,7 +1,9 @@
-from PyFretboard.song_xml import parse_song_xml
+from os.path import join
+
 from PyFretboard.build_shape import BuildShape
 from PyFretboard.draw_shape import DrawShape
-from os.path import join
+from PyFretboard.song_xml import parse_song_xml
+
 
 class Song:
     """Song class"""

@@ -100,7 +100,7 @@ class Song:
                         key = "{} {} {}".format(chord.root, chord.type, shape_id)
 
                     if key not in shapes:
-                        shapes[key] = chord.shape[shape_id]
+                        shapes[key] = (chord.root, chord.type, chord.shape[shape_id])
         return shapes 
     
     @staticmethod

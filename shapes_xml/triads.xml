@@ -203,6 +203,105 @@
                     </finger>
                 </fingers>
             </shape>
+
+
+            <shape id="set 3 triad 5 top">
+                <type>strum</type>
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>E</string>
+                        <fret>8</fret>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>A</string>
+                        <fret>7</fret>
+                        <function>3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>D</string>
+                        <fret>5</fret>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="set 3 triad 1 top">
+                <type>strum</type>
+                <fingers>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>E</string>
+                        <fret>12</fret>
+                        <function>3</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <fret>10</fret>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <fret>10</fret>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="set 3 triad 3 top">
+                <type>strum</type>
+                <fingers>
+                     <finger>
+                        <pitch>G</pitch>
+                        <string>E</string>
+                        <fret>3</fret>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <fret>3</fret>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>E</pitch>
+                        <string>D</string>
+                        <fret>2</fret>
+                        <function>3</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+
         </chord>
 
         <chord>
@@ -396,6 +495,103 @@
                         <fret>13</fret>
                         <function>1</function>
                         <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            
+            <shape id="set 3 triad 5 top">
+                <type>strum</type>
+                <fingers>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>E</string>
+                        <fret>8</fret>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>A</string>
+                        <fret>6</fret>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>D</string>
+                        <fret>5</fret>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="set 3 triad 1 top">
+                <type>strum</type>
+                <fingers>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>E</string>
+                        <fret>11</fret>
+                        <function>b3</function>
+                        <fingering>2</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>A</string>
+                        <fret>10</fret>
+                        <function>5</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>D</string>
+                        <fret>10</fret>
+                        <function>1</function>
+                        <fingering>1</fingering>
+                        <barrel>True</barrel>
+                        <visual>0</visual>
+                    </finger>
+                </fingers>
+            </shape>
+            <shape id="set 3 triad 3 top">
+                <type>strum</type>
+                <fingers>
+                    <finger>
+                        <pitch>G</pitch>
+                        <string>E</string>
+                        <fret>3</fret>
+                        <function>5</function>
+                        <fingering>3</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>C</pitch>
+                        <string>A</string>
+                        <fret>3</fret>
+                        <function>1</function>
+                        <fingering>4</fingering>
+                        <barrel>False</barrel>
+                        <visual>0</visual>
+                    </finger>
+                    <finger>
+                        <pitch>Eb</pitch>
+                        <string>D</string>
+                        <fret>1</fret>
+                        <function>b3</function>
+                        <fingering>1</fingering>
                         <barrel>False</barrel>
                         <visual>0</visual>
                     </finger>

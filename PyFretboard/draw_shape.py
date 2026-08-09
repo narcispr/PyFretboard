@@ -106,7 +106,13 @@ class DrawShape:
             axes.add_artist(circle)
             circle = plt.Circle(max_pos, self.dot_size*1.4, color='darkgray', fill=True, zorder=2)
             axes.add_artist(circle)
-            rect = patches.Rectangle((min_pos[0], min_pos[1] - self.dot_size*1.45), max_pos[0]-min_pos[0], self.dot_size*2.8 , color='darkgray', zorder=2)
+            rect = patches.Rectangle(
+                (min_pos[0], min_pos[1] - self.dot_size*1.4),
+                max_pos[0] - min_pos[0],
+                self.dot_size*2.8,
+                color='darkgray',
+                zorder=2,
+            )
             axes.add_patch(rect)
     
     def __draw_barrel_scale__(self, shape, min_f, axes):
@@ -132,7 +138,13 @@ class DrawShape:
             axes.add_artist(circle)
             circle = plt.Circle((max_pos[1], max_pos[0]), self.dot_size*1.2, color='lightgray', fill=True, zorder=2)
             axes.add_artist(circle)
-            rect = patches.Rectangle((min_pos[1] - self.dot_size*1.25, min_pos[0]), self.dot_size*2.4, max_pos[0]-min_pos[0], color='lightgray', zorder=2)
+            rect = patches.Rectangle(
+                (min_pos[1] - self.dot_size*1.2, min_pos[0]),
+                self.dot_size*2.4,
+                max_pos[0] - min_pos[0],
+                color='lightgray',
+                zorder=2,
+            )
             axes.add_patch(rect)
 
     def __draw_fretboard__(self, axes, frets, init_fret, shape_name, show_string_names):
@@ -242,4 +254,3 @@ class DrawShape:
         elif self.text == PF.TEXT_PITCH:
             note = f.pitch
             axes.text(x-l, y-y_offset, note, fontsize=size, color='white')
-           

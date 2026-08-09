@@ -50,7 +50,11 @@ class DrawScore:
 
 
 
-        l = len(shape.fingers)*30 + 27 + 30*position_mult
+        # Keep the final barline attached to the actual end of the staff.  The
+        # number of fingers is unrelated to the width of a strummed chord: all
+        # its notes share the same horizontal position.  Using it here placed
+        # three-note barlines too early and five-note barlines beyond the staff.
+        l = 60 + length*30 - 3
         ax.plot([l]*2, [0, 40], 'k', )
         ax.plot([l+3]*2, [0, 40], 'k', linewidth=1)
         ax.plot([l+3.25]*2, [0, 40], 'k', linewidth=1)
@@ -106,26 +110,37 @@ class DrawScore:
 
     def __draw_note__(self, ax, note, octave, position, alterations, factor=1, sub_text="", super_text="", offset=False):
         bool_alteration = False
+        alteration_offset = 0
         pitch = {'C': -14, 'D': -9, 'E': -4, 'F': 1, 'G': 6, 'A': 11, 'B': 16}
         text = "w"
         x = 60 + position * 30
-        if len(note) > 1: 
+        if note.endswith('bb'):
+            if not offset:
+                x -= 24
+            text = "bbw"
+            alterations[note[0]] = True
+            bool_alteration = True
+            alteration_offset = 22
+        elif len(note) > 1:
             if not offset:
                 x -= 12
             if note[1] == 'b':
                 text = "bw"
                 alterations[note[0]] = True
                 bool_alteration = True
+                alteration_offset = 10
             elif note[1] == '#':
                 alterations[note[0]] = True
                 text = "Bw"
                 bool_alteration = True
+                alteration_offset = 10
         elif alterations[note[0]]:
             if not offset:
                 x -= 11
             text = "½w"
             alterations[note[0]] = False
             bool_alteration = True
+            alteration_offset = 10
         elif offset:
             x += 14
         y = pitch[note[0]] + octave*35 - 1
@@ -134,7 +149,7 @@ class DrawScore:
         if y <= -14:
             x_bar = x
             if bool_alteration:
-                x_bar += 10
+                x_bar += alteration_offset
             
             for i in range(-14, y-1, -10):
                 ax.plot([x_bar-2, x_bar+18], [i+3.5, i+3.5], 'k')
@@ -143,7 +158,7 @@ class DrawScore:
         if y >= 45:
             x_bar = x
             if bool_alteration:
-                x_bar += 10
+                x_bar += alteration_offset
             for i in range(46, y+2, 10):
                 ax.plot([x_bar-2, x_bar+18], [i+4, i+4], 'k')
 
@@ -159,7 +174,7 @@ class DrawScore:
         
         x_text = x
         if bool_alteration:
-            x_text += 10
+            x_text += alteration_offset
     
         ax.text(x_text, y_sub_text, sub_text, fontsize=10*factor, fontname='DejaVu Sans')
         ax.text(x_text, y_super_text, super_text, fontsize=10*factor, fontname='DejaVu Sans')
